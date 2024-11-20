@@ -21,3 +21,6 @@ vim.g.alt_send_esc = true
 vim.g.ai_suggestion = true
 vim.g.ai_cmp = true
 
+-- Enable LSP Signature
+vim.g.lsp_signature = false
+
