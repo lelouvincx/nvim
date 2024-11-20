@@ -16,3 +16,8 @@ vim.g.lazyvim_python_ruff = "ruff"
 
 -- Send ESC to the terminal to keep it from exiting
 vim.g.alt_send_esc = true
+
+-- Enable AI
+vim.g.ai_suggestion = true
+vim.g.ai_cmp = true
+
