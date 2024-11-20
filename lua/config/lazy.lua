@@ -13,6 +13,10 @@ require("lazy").setup({
         -- extras ai
         { import = "lazyvim.plugins.extras.ai.copilot" },
         { import = "lazyvim.plugins.extras.ai.copilot-chat" },
+        -- extras coding
+        { import = "lazyvim.plugins.extras.coding.mini-surround" },
+        -- extras dap
+        { import = "lazyvim.plugins.extras.dap.core" },
         -- extras lang
         { import = "lazyvim.plugins.extras.lang.python" },
         { import = "lazyvim.plugins.extras.lang.typescript" },
@@ -24,28 +28,41 @@ require("lazy").setup({
         { import = "lazyvim.plugins.extras.lang.toml" },
         { import = "lazyvim.plugins.extras.lang.markdown" },
         { import = "lazyvim.plugins.extras.lang.git" },
+        -- extras ui
+        { import = "lazyvim.plugins.extras.ui.mini-animate" },
+        { import = "lazyvim.plugins.extras.ui.mini-indentscope" },
+        { import = "lazyvim.plugins.extras.ui.edgy" },
+        { import = "lazyvim.plugins.extras.ui.treesitter-context" },
+        -- extras lsp
+        { import = "lazyvim.plugins.extras.lsp.none-ls" },
+        -- extras test
+        { import = "lazyvim.plugins.extras.test.core" },
+        -- extras editor
         { import = "lazyvim.plugins.extras.editor.illuminate" },
         { import = "lazyvim.plugins.extras.editor.mini-diff" },
         { import = "lazyvim.plugins.extras.editor.aerial" },
-        -- { import = "lazyvim.plugins.extras.lang.typescript" },
-        -- { import = "lazyvim.plugins.extras.ui.mini-animate" },
+        { import = "lazyvim.plugins.extras.editor.navic" },
         -- extras formatting
         { import = "lazyvim.plugins.extras.formatting.prettier" },
         { import = "lazyvim.plugins.extras.formatting.black" },
+        -- extras util
+        { import = "lazyvim.plugins.extras.util.project" },
+        { import = "lazyvim.plugins.extras.util.startuptime" },
         -- import/override with your plugins
         { import = "plugins" },
+        { import = "lsp" },
     },
     defaults = {
         -- By default, only LazyVim plugins will be lazy-loaded. Your custom plugins will load during startup.
         -- If you know what you're doing, you can set this to `true` to have all your custom plugins lazy-loaded by default.
-        lazy = false,
+        lazy = true,
         -- It's recommended to leave version=false for now, since a lot the plugin that support versioning,
         -- have outdated releases, which may break your Neovim install.
         version = false, -- always use the latest git commit
         -- version = "*", -- try installing the latest stable version for plugins that support semver
     },
-    install = { colorscheme = { "tokyonight", "habamax" } },
-    checker = { enabled = true }, -- automatically check for plugin updates
+    install = { colorscheme = { "catppuccin" } },
+    checker = { enabled = false }, -- automatically check for plugin updates
     performance = {
         rtp = {
             -- disable some rtp plugins
