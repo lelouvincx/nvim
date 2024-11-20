@@ -1,6 +1,29 @@
-# nvim - Neovim Configuration
+# Lelouvincx's Neovim Configuration
 
 ## Features
+
+- **LazyVim** for managing plugins
+- **Lua** for configurations
+- **LSP** for autocompletion, diagnostics, formatting, and more
+- DAP for debugging
+
+### My personal environments
+
+Currently I'm using Neovim as my main IDE for developing data engineering and LLM applications (as hobby):
+
+- OS: MacOS/Ubuntu 24.04 LTS
+- Terminal: iTerm2, Alacritty
+- Neovim: v0.10.1
+- Font: JetBrainsMono Nerd Font Mono
+- Shell: ZSH, package managed by ZimFW, with theme spaceship prompt
+- Languages: Python, Javascript, Typescript, Java, SQL, Bash, Ruby; managed by [asdf](https://asdf-vm.com/)
+
+### My gears
+
+- **Laptop**: Macbook Pro 2024 M4 14-inch/Thinkbook 14
+- **Mouse**: Logitech
+- **Keyboard**: NuPhy Air75
+- **Headphone**: Skullcandy Hesh ANC Noice Cancelling
 
 ## Requirements
 
@@ -76,4 +99,4 @@ In general, I want to give thanks to everyone who shares their dotfiles for thei
 ## About me
 
 - Visit my blog: [lelouvincx](https://lelouvincx.github.io)
-- Email me: [dinhminhchinh3357@gmail.com][mailto:dinhminhchinh3357@gmail.com]
+- Email me: [dinhminhchinh3357@gmail.com](mailto:dinhminhchinh3357@gmail.com)
