@@ -52,3 +52,28 @@ nvim
 ```
 
 ## Configuration
+
+## Usage
+
+Please make sure you know and understand how your configs work before continuing. Since this is just my personal working configurations, I don't provide any user support. Just look at it as a valuable references for your own configurations. If you run into any issues, you can try:
+
+1. Google and stackoverflow the error message
+2. Check your dependencies and environments
+3. Report with the plugin author
+
+If you want to experience with this dotfiles it's pretty easy to do. Firstly you should backup all your config files in one place to keep it safe. Then fork this repo and clone to your local system and play with it anyway you want.
+
+- Resource neovim config by saving then `:so%`. Or you can relaunch it.
+
+Many thanks for reading until here and enjoy your own dotfiles!
+
+## Thanks to...
+
+I want to give the special thanks to Ly Thanh Nhan, who first inspired me to use neovim as main IDE (you can visit his blog [here](https://nextlint.com/@lythanhnhan27294)). After a pretty long time working on this project I think myself has a good knowledge and experience to share you guys. Besides, [balldk](https://github.com/balldk), [craftzdog](https://github.com/craftzdog/dotfiles-public) and [drievints](https://github.com/driesvints/dotfiles) taught me a lot for completing and improving my configs.
+
+In general, I want to give thanks to everyone who shares their dotfiles for their efforts to contribute their knowledge, mind and experience to the open-source community.
+
+## About me
+
+- Visit my blog: [lelouvincx](https://lelouvincx.github.io)
+- Email me: [dinhminhchinh3357@gmail.com][mailto:dinhminhchinh3357@gmail.com]
