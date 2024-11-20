@@ -24,3 +24,5 @@ vim.g.ai_cmp = true
 -- Enable LSP Signature
 vim.g.lsp_signature = false
 
+-- Enable remote
+vim.g.remote = true
