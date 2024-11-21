@@ -34,6 +34,12 @@ Adopting the [LazyVim](https://www.lazyvim.org/) philosophy, this configuration 
 </details>
 
 <details>
+  <summary><b>NeoTree</b></summary>
+  <div>Show file directory, with preview, gitsigns.</div>
+  <video src=""></video>
+</details>
+
+<details>
   <summary><b>Fuzzy Finder</b></summary>
   <div>Quickly find files with Fuzzy Finder.</div>
   <video src="https://github.com/user-attachments/assets/48978c4e-139e-44cb-bd26-9df4fa561141"></video>
@@ -81,13 +87,14 @@ Adopting the [LazyVim](https://www.lazyvim.org/) philosophy, this configuration 
 </details>
 
 <details>
-  <summary><b>Git (gitsigns, git hunk diff, mini.diff)</b></summary>
+  <summary><b>Git Integration</b></summary>
+  <summary><b>Git Diff (gitsigns, git hunk diff, mini.diff, lazygit)</b></summary>
   <video src="https://github.com/user-attachments/assets/3137b246-1aa6-408a-9e78-7d788b5e5f55"></video>
   <summary><b>Integrated with Lazygit</b></summary>
   <img src="./_media/lazygit.png"></img>
-  <summary><b>Git Commit history</b></summary>
+  <summary><b>Git Commit History</b></summary>
   <img src="./_media/gitcommithistory.png"></img>
-  <summary><b>View current file's history</b></summary>
+  <summary><b>View current file's History</b></summary>
   <img src="./_media/gitcurrentfilehistory.png"></img>
 </details>
 
