@@ -26,7 +26,7 @@ Adopting the [LazyVim](https://www.lazyvim.org/) philosophy, this configuration 
   <div>Quickly find files with Fuzzy Finder.</div>
   <video src="https://github.com/user-attachments/assets/48978c4e-139e-44cb-bd26-9df4fa561141"></video>
   <div>Navigate between buffers, projects, history files.</div>
-  <video src=""></video>
+  <video src="https://github.com/user-attachments/assets/daefb235-8784-4637-9fdd-2d816c1314b7"></video>
 </details>
 
 <details>
@@ -45,9 +45,9 @@ Adopting the [LazyVim](https://www.lazyvim.org/) philosophy, this configuration 
 <details>
   <summary><b>Code Autocomplete</b></summary>
   <div>Autosuggestion.</div>
-  <video src=""></video>
+  <video src="https://github.com/user-attachments/assets/140e102c-c758-436b-9dfb-b8c5a59c5d2c"></video>
   <div>Copilot help.</div>
-  <video src=""></video>
+  <video src="https://github.com/user-attachments/assets/21d74e60-e32a-43bf-9950-5aa34cf1fc75"></video>
 </details>
 
 ### My personal environment
