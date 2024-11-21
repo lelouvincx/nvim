@@ -81,6 +81,17 @@ Adopting the [LazyVim](https://www.lazyvim.org/) philosophy, this configuration 
 </details>
 
 <details>
+  <summary><b>Git (gitsigns, git hunk diff, mini.diff)</b></summary>
+  <video src=""></video>
+  <summary><b>Integrated with Lazygit</b></summary>
+  <img src="./_media/lazygit.png"></img>
+  <summary><b>Git Commit history</b></summary>
+  <img src="./_media/gitcommithistory.png"></img>
+  <summary><b>View current file's history</b></summary>
+  <img src="./_media/gitcurrentfilehistory.png"></img>
+</details>
+
+<details>
   <summary><b>Debugging</b></summary>
   <div>Debugging Options.</div>
   <img src="./_media/debugui.png"></img>
