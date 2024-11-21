@@ -76,11 +76,11 @@ Adopting the [LazyVim](https://www.lazyvim.org/) philosophy, this configuration 
 <details>
   <summary><b>AI Copilot Chat</b></summary>
   <div>Chat with Copilot.</div>
-  <video src=""></video>
+  <video src="https://github.com/user-attachments/assets/86206487-9133-41a2-82d8-63dfc000ad4c"></video>
   <div>Improve developing experience with highly customized prompts.</div>
   <img src="./_media/copilotchatprompts.png"></img>
   <div>Quick Chat.</div>
-  <video src=""></video>
+  <video src="https://github.com/user-attachments/assets/2820ebfd-1862-4086-998c-57c8eb6cfef8"></video>
 </details>
 
 <details>
