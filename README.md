@@ -74,6 +74,16 @@ Adopting the [LazyVim](https://www.lazyvim.org/) philosophy, this configuration 
 </details>
 
 <details>
+  <summary><b>AI Copilot Chat</b></summary>
+  <div>Chat with Copilot.</div>
+  <video src=""></video>
+  <div>Improve developing experience with highly customized prompts.</div>
+  <img src="./_media/copilotchatprompts.png"></img>
+  <div>Quick Chat.</div>
+  <video src=""></video>
+</details>
+
+<details>
   <summary><b>Git Integration</b></summary>
   <summary><b>Git Diff (gitsigns, git hunk diff, mini.diff, lazygit)</b></summary>
   <video src="https://github.com/user-attachments/assets/3137b246-1aa6-408a-9e78-7d788b5e5f55"></video>
