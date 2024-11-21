@@ -23,7 +23,7 @@ Adopting the [LazyVim](https://www.lazyvim.org/) philosophy, this configuration 
 
 <details>
   <summary><b>Fuzzy Finder</b></summary>
-<img src="./_media/fzf_findfile.mp4"/>
+  <video src="./_media/fzf_findfile.mp4" width=360></video>
 </details>
 
 ### My personal environment
