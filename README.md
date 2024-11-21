@@ -82,7 +82,7 @@ Adopting the [LazyVim](https://www.lazyvim.org/) philosophy, this configuration 
 
 <details>
   <summary><b>Integrated terminal</b></summary>
-  <video src=""></video>
+  <video src="https://github.com/user-attachments/assets/08bb9e65-9746-4b95-aba1-4426e930c3ef"></video>
 </details>
 
 <details>
@@ -94,7 +94,7 @@ Adopting the [LazyVim](https://www.lazyvim.org/) philosophy, this configuration 
   <summary><b>Comments</b></summary>
   <img src="./_media/comments.png"></img>
   <summary><b>Toggle Trouble to quick diagnostics navigation.</b></summary>
-  <video src=""></video>
+  <video src="https://github.com/user-attachments/assets/0661671a-886e-49e6-a9f7-f0176a4bd2c5"></video>
   <summary><b>Telescope comments</b></summary>
   <img src="./_media/telescopecomments.png"></img>
 </details>
