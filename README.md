@@ -2,14 +2,19 @@
 
 ## Screenshots
 
+Standard code editing (with Neotree, Trouble, and mini view of functions):
 ![](./_media/featured_1.png)
 
+telescope search:
 ![](./_media/featured_2.png)
 
+Copilot Chat:
 ![](./_media/featured_3.png)
 
+Debugging with Dap:
 ![](./_media/featured_4.png)
 
+Multiple Languages supported:
 ![](./_media/featured_5.png)
 
 ## Features
