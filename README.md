@@ -36,7 +36,7 @@ Adopting the [LazyVim](https://www.lazyvim.org/) philosophy, this configuration 
 <details>
   <summary><b>NeoTree</b></summary>
   <div>Show file directory, with preview, gitsigns.</div>
-  <video src=""></video>
+  <video src="https://github.com/user-attachments/assets/5e1be642-6b91-4c0f-8d54-3124c11e40ff"></video>
 </details>
 
 <details>
