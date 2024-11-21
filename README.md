@@ -2,14 +2,16 @@
 
 ## Features
 
-- **LazyVim** for managing plugins
-- **Lua** for configurations
-- **LSP** for autocompletion, diagnostics, formatting, and more
-- DAP for debugging
+Adopting the [LazyVim](https://www.lazyvim.org/) philosophy, this configuration is designed to be simple, clean, and easy to use. It is focused on providing a great experience for coding in Python, Javascript, Typescript, Java, SQL, Bash, Ruby, and more.
+
+<details>
+  <summary><b>Status Line</b></summary>
+<img src="./_media/statusline.png"/>
+</details>
 
 ### My personal environments
 
-Currently I'm using Neovim as my main IDE for developing data engineering and LLM applications (as hobby):
+Currently I'm using Neovim as my main IDE for developing data engineering platforms and LLM applications (as hobby):
 
 - **Laptop**: Macbook Pro 2024 M4-Pro 14-inch/Thinkbook 14
 - **Keyboard**: NuPhy Air75
@@ -19,7 +21,7 @@ Currently I'm using Neovim as my main IDE for developing data engineering and LL
 - **Tmux**: 3.4
 - **Font**: JetBrainsMono Nerd Font Mono
 - **Theme**: Catppuccin
-- **Shell**: ZSH, package managed by ZimFW, with theme spaceship prompt
+- **Shell**: ZSH, package managed by [zimfw](https://github.com/zimfw/zimfw), with theme [spaceship prompt](https://github.com/spaceship-prompt/spaceship-prompt)
 - **Languages**: Python, Javascript, Typescript, Java, SQL, Bash, Ruby; managed by [asdf](https://asdf-vm.com/)
 
 ## Requirements
