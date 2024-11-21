@@ -2,19 +2,19 @@
 
 ## Screenshots
 
-Standard code editing (with Neotree, Trouble, and mini view of functions):
+**Standard code editing** (with Neotree, Trouble, and mini view of functions):
 ![](./_media/featured_1.png)
 
-telescope search:
+**Telescope search**:
 ![](./_media/featured_2.png)
 
-Copilot Chat:
+**Copilot Chat**:
 ![](./_media/featured_3.png)
 
-Debugging with Dap:
+**Debugging with Dap**:
 ![](./_media/featured_4.png)
 
-Multiple Languages supported:
+**Multiple Languages supported**:
 ![](./_media/featured_5.png)
 
 ## Features
@@ -81,13 +81,27 @@ Adopting the [LazyVim](https://www.lazyvim.org/) philosophy, this configuration 
 </details>
 
 <details>
-  <summary><b>Rainbow brackets</b></summary>
-  <img src="./_media/rainbowbrackets.png"/>
+  <summary><b>Integrated terminal</b></summary>
+  <video src=""></video>
 </details>
 
 <details>
   <summary><b>Generate annotations</b></summary>
   <video src="https://github.com/user-attachments/assets/d0e974e3-e0a2-4782-860f-45f4a09f2da4"></video>
+</details>
+
+<details>
+  <summary><b>Comments</b></summary>
+  <img src="./_media/comments.png"></img>
+  <summary><b>Toggle Trouble to quick diagnostics navigation.</b></summary>
+  <video src=""></video>
+  <summary><b>Telescope comments</b></summary>
+  <img src="./_media/telescopecomments.png"></img>
+</details>
+
+<details>
+  <summary><b>Rainbow brackets</b></summary>
+  <img src="./_media/rainbowbrackets.png"/>
 </details>
 
 ### My personal environment
