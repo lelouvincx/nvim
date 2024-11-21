@@ -81,6 +81,14 @@ Adopting the [LazyVim](https://www.lazyvim.org/) philosophy, this configuration 
 </details>
 
 <details>
+  <summary><b>Debugging</b></summary>
+  <div>Debugging Options.</div>
+  <img src="./_media/debugui.png"></img>
+  <div>Debug flow.</div>
+  <video src=""></video>
+</details>
+
+<details>
   <summary><b>Integrated terminal</b></summary>
   <video src="https://github.com/user-attachments/assets/08bb9e65-9746-4b95-aba1-4426e930c3ef"></video>
 </details>
