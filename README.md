@@ -163,6 +163,8 @@ Adopting the [LazyVim](https://www.lazyvim.org/) philosophy, this configuration 
 
 Currently I'm using Neovim as my main IDE for developing data engineering platforms and LLM applications (as hobby):
 
+![](./_media/mylaptop.jpg)
+
 - **Laptop**: Macbook Pro 2024 M4-Pro 14-inch/Thinkbook 14
 - **Keyboard**: NuPhy Air75
 - **OS**: MacOS/Ubuntu 24.04 LTS
