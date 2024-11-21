@@ -139,7 +139,7 @@ Adopting the [LazyVim](https://www.lazyvim.org/) philosophy, this configuration 
 
 <details>
   <summary><b>Lazydocker Integration</b></summary>
-  <video src=""></video>
+  <video src="https://github.com/user-attachments/assets/1f64db96-651a-495a-b1e9-d25de44df916"></video>
 </details>
 
 <details>
