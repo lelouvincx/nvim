@@ -6,10 +6,27 @@ Adopting the [LazyVim](https://www.lazyvim.org/) philosophy, this configuration 
 
 <details>
   <summary><b>Status Line</b></summary>
+  <div>Parts include git status, diagnostics, current buffer path, class, function working on, copilot status, cursor position.</div>
 <img src="./_media/statusline.png"/>
 </details>
 
-### My personal environments
+<details>
+  <summary><b>Buffer Line</b></summary>
+  <div>Shows buffer list, diagnostics.</div>
+<img src="./_media/bufferline.png"/>
+</details>
+
+<details>
+  <summary><b>Diagnostics</b></summary>
+<img src="./_media/diagnostics.png"/>
+</details>
+
+<details>
+  <summary><b>Fuzzy Finder</b></summary>
+<img src="./_media/fzf_findfile.mp4"/>
+</details>
+
+### My personal environment
 
 Currently I'm using Neovim as my main IDE for developing data engineering platforms and LLM applications (as hobby):
 
