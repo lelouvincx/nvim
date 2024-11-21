@@ -1,6 +1,6 @@
 # Lelouvincx's Neovim Configuration
 
-## Screenshots
+## 1. Screenshots
 
 **Standard code editing** (with Neotree, Trouble, and mini view of functions):
 ![](./_media/featured_1.png)
@@ -17,7 +17,7 @@
 **Multiple Languages supported**:
 ![](./_media/featured_5.png)
 
-## Features
+## 2. Features
 
 Adopting the [LazyVim](https://www.lazyvim.org/) philosophy, this configuration is designed to be simple, clean, and easy to use. It is focused on providing a great experience for coding in Python, Javascript, Typescript, Java, SQL, Bash, Ruby, and more.
 
@@ -157,6 +157,8 @@ Adopting the [LazyVim](https://www.lazyvim.org/) philosophy, this configuration 
   <img src="./_media/rainbowbrackets.png"/>
 </details>
 
+... and many more features, visit [lazyvim](https://www.lazyvim.org/)!
+
 ### My personal environment
 
 Currently I'm using Neovim as my main IDE for developing data engineering platforms and LLM applications (as hobby):
@@ -172,7 +174,7 @@ Currently I'm using Neovim as my main IDE for developing data engineering platfo
 - **Shell**: ZSH, package managed by [zimfw](https://github.com/zimfw/zimfw), with theme [spaceship prompt](https://github.com/spaceship-prompt/spaceship-prompt)
 - **Languages**: Python, Javascript, Typescript, Java, SQL, Bash, Ruby; managed by [asdf](https://asdf-vm.com/)
 
-## Requirements
+## 3. Requirements
 
 - Neovim >= **0.9.0** (needs to be built with **LuaJIT**)
 - Git >= **2.19.0** (for partial clones support)
@@ -190,7 +192,7 @@ Currently I'm using Neovim as my main IDE for developing data engineering platfo
   - [alacritty](https://github.com/alacritty/alacritty) **_(Linux, Macos & Windows)_**
   - [iterm2](https://iterm2.com/) **_(Macos)_**
 
-## Installation
+## 4. Installation
 
 Make a backup of your current Neovim files:
 
@@ -222,7 +224,7 @@ Start Neovim!:
 nvim
 ```
 
-## Configuration
+## 5. Configuration
 
 To get into Neovim faster, you can set alias in your shell config file:
 
@@ -231,7 +233,9 @@ alias n='nvim .' # run neovim in current directory
 alias nv='nvim' # run neovim with special file, e.g `nvim init.vim`
 ```
 
-## Usage
+(Writing...)
+
+## 6. Usage
 
 Please make sure you know and understand how your configs work before continuing. Since this is just my personal working configurations, I don't provide any user support. Just look at it as a valuable references for your own configurations. If you run into any issues, you can try:
 
@@ -245,13 +249,13 @@ If you want to experience with this dotfiles it's pretty easy to do. Firstly you
 
 Many thanks for reading until here and enjoy your own dotfiles!
 
-## Thanks to...
+## 7. Thanks to...
 
 I want to give the special thanks to Ly Thanh Nhan, who first inspired me to use neovim as main IDE (you can visit his blog [here](https://nextlint.com/@lythanhnhan27294)). After a pretty long time working on this project I think myself has a good knowledge and experience to share you guys. Besides, [balldk](https://github.com/balldk), [craftzdog](https://github.com/craftzdog/dotfiles-public) and [drievints](https://github.com/driesvints/dotfiles) taught me a lot for completing and improving my configs.
 
 In general, I want to give thanks to everyone who shares their dotfiles for their efforts to contribute their knowledge, mind and experience to the open-source community.
 
-## About me
+## 8. About me
 
 - Visit my blog: [lelouvincx](https://lelouvincx.github.io)
 - Email me: [dinhminhchinh3357@gmail.com](mailto:dinhminhchinh3357@gmail.com)
