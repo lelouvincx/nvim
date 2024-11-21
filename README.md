@@ -82,7 +82,7 @@ Adopting the [LazyVim](https://www.lazyvim.org/) philosophy, this configuration 
 
 <details>
   <summary><b>Git (gitsigns, git hunk diff, mini.diff)</b></summary>
-  <video src=""></video>
+  <video src="https://github.com/user-attachments/assets/3137b246-1aa6-408a-9e78-7d788b5e5f55"></video>
   <summary><b>Integrated with Lazygit</b></summary>
   <img src="./_media/lazygit.png"></img>
   <summary><b>Git Commit history</b></summary>
