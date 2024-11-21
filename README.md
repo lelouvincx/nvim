@@ -85,7 +85,7 @@ Adopting the [LazyVim](https://www.lazyvim.org/) philosophy, this configuration 
   <div>Debugging Options.</div>
   <img src="./_media/debugui.png"></img>
   <div>Debug flow.</div>
-  <video src=""></video>
+  <video src="https://github.com/user-attachments/assets/edf465af-8376-4b32-bda2-fe95a3a4bdf2"></video>
 </details>
 
 <details>
