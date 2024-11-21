@@ -29,9 +29,9 @@ Adopting the [LazyVim](https://www.lazyvim.org/) philosophy, this configuration 
   <div>Code diagnostics (info, warning, error).</div>
   <img src="./_media/diagnostics.png"/>
   <div>Toggle Trouble to quick diagnostics navigation.</div>
-  <video src=""></video>
+  <video src="https://github.com/user-attachments/assets/7ce24eee-f8c0-400f-b1ae-9f016c61ba1c"></video>
   <div>Go to references.</div>
-  <video src=""></video>
+  <video src="https://github.com/user-attachments/assets/0e6a3f07-8204-45b3-a645-b0488bb72560"></video>
   <div>Code Action.</div>
   <img src="./_media/codeaction.png"></img>
   <div>Document.</div>
@@ -39,7 +39,7 @@ Adopting the [LazyVim](https://www.lazyvim.org/) philosophy, this configuration 
   <div>LSP Progress.</div>
   <img src="./_media/lspprogress.png"></img>
   <div>Switch Python VENV.</div>
-  <video src=""></video>
+  <video src="https://github.com/user-attachments/assets/fed2b2f3-c81d-4de4-b5d6-04fe563b244f"></video>
 </details>
 
 <details>
@@ -66,6 +66,11 @@ Adopting the [LazyVim](https://www.lazyvim.org/) philosophy, this configuration 
 <details>
   <summary><b>Rainbow brackets</b></summary>
   <img src="./_media/rainbowbrackets.png"/>
+</details>
+
+<details>
+  <summary><b>Generate annotations</b></summary>
+  <video src="https://github.com/user-attachments/assets/d0e974e3-e0a2-4782-860f-45f4a09f2da4"></video>
 </details>
 
 ### My personal environment
