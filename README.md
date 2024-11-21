@@ -66,19 +66,6 @@ Adopting the [LazyVim](https://www.lazyvim.org/) philosophy, this configuration 
 </details>
 
 <details>
-  <summary><b>Git Blame when hover line</b></summary>
-  <img src="./_media/gitblame.png"/>
-</details>
-
-<details>
-  <summary><b>Rename</b></summary>
-  <div>Rename all in current file.</div>
-  <video src="https://github.com/user-attachments/assets/2421f330-d236-4573-803d-f135b7188f97"></video>
-  <div>Rename all workspace.</div>
-  <video src="https://github.com/user-attachments/assets/f53aea46-ec6d-4e4c-aeab-11bc1dbda1c0"></video>
-</details>
-
-<details>
   <summary><b>Code Autocomplete</b></summary>
   <div>Autosuggestion.</div>
   <video src="https://github.com/user-attachments/assets/140e102c-c758-436b-9dfb-b8c5a59c5d2c"></video>
@@ -96,6 +83,11 @@ Adopting the [LazyVim](https://www.lazyvim.org/) philosophy, this configuration 
   <img src="./_media/gitcommithistory.png"></img>
   <summary><b>View current file's History</b></summary>
   <img src="./_media/gitcurrentfilehistory.png"></img>
+</details>
+
+ <details>
+  <summary><b>Git Blame when hover line</b></summary>
+  <img src="./_media/gitblame.png"/>
 </details>
 
 <details>
@@ -117,12 +109,37 @@ Adopting the [LazyVim](https://www.lazyvim.org/) philosophy, this configuration 
 </details>
 
 <details>
+  <summary><b>Rename</b></summary>
+  <div>Rename all in current file.</div>
+  <video src="https://github.com/user-attachments/assets/2421f330-d236-4573-803d-f135b7188f97"></video>
+  <div>Rename all workspace.</div>
+  <video src="https://github.com/user-attachments/assets/f53aea46-ec6d-4e4c-aeab-11bc1dbda1c0"></video>
+</details>
+
+<details>
+  <summary><b>Keymap Suggestion</b></summary>
+  <summary><b>Global Keymap</b></summary>
+  <img src="./_media/keymap_1.png"></img>
+  <summary><b>LSP Keymap</b></summary>
+  <img src="./_media/keymap_2.png"></img>
+  <summary><b>Git Keymap</b></summary>
+  <img src="./_media/keymap_3.png"></img>
+  <summary><b>Window Keymap</b></summary>
+  <img src="./_media/keymap_4.png"></img>
+</details>
+
+<details>
   <summary><b>Comments</b></summary>
   <img src="./_media/comments.png"></img>
   <summary><b>Toggle Trouble to quick diagnostics navigation.</b></summary>
   <video src="https://github.com/user-attachments/assets/0661671a-886e-49e6-a9f7-f0176a4bd2c5"></video>
   <summary><b>Telescope comments</b></summary>
   <img src="./_media/telescopecomments.png"></img>
+</details>
+
+<details>
+  <summary><b>Lazydocker Integration</b></summary>
+  <video src=""></video>
 </details>
 
 <details>
