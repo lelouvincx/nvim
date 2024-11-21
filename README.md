@@ -11,19 +11,16 @@
 
 Currently I'm using Neovim as my main IDE for developing data engineering and LLM applications (as hobby):
 
-- OS: MacOS/Ubuntu 24.04 LTS
-- Terminal: iTerm2, Alacritty
-- Neovim: v0.10.1
-- Font: JetBrainsMono Nerd Font Mono
-- Shell: ZSH, package managed by ZimFW, with theme spaceship prompt
-- Languages: Python, Javascript, Typescript, Java, SQL, Bash, Ruby; managed by [asdf](https://asdf-vm.com/)
-
-### My gears
-
-- **Laptop**: Macbook Pro 2024 M4 14-inch/Thinkbook 14
-- **Mouse**: Logitech
+- **Laptop**: Macbook Pro 2024 M4-Pro 14-inch/Thinkbook 14
 - **Keyboard**: NuPhy Air75
-- **Headphone**: Skullcandy Hesh ANC Noice Cancelling
+- **OS**: MacOS/Ubuntu 24.04 LTS
+- **Terminal**: iTerm2, Alacritty
+- **Neovim**: v0.10.1
+- **Tmux**: 3.4
+- **Font**: JetBrainsMono Nerd Font Mono
+- **Theme**: Catppuccin
+- **Shell**: ZSH, package managed by ZimFW, with theme spaceship prompt
+- **Languages**: Python, Javascript, Typescript, Java, SQL, Bash, Ruby; managed by [asdf](https://asdf-vm.com/)
 
 ## Requirements
 
@@ -32,6 +29,7 @@ Currently I'm using Neovim as my main IDE for developing data engineering and LL
 - [LazyVim](https://www.lazyvim.org/)
 - a [Nerd Font](https://www.nerdfonts.com/)(v3.0 or greater) **_(optional, but needed to display some icons)_**, recommended is JetBrainsMono Nerd Font Mono
 - [lazygit](https://github.com/jesseduffield/lazygit) **_(optional)_**
+- [lazydocker](https://github.com/jesseduffield/lazydocker) **_(optional)_**
 - a **C** compiler for `nvim-treesitter`. See [here](https://github.com/nvim-treesitter/nvim-treesitter#requirements)
 - for [telescope.nvim](https://github.com/nvim-telescope/telescope.nvim) **_(optional)_**
   - **live grep**: [ripgrep](https://github.com/BurntSushi/ripgrep)
@@ -82,7 +80,7 @@ Please make sure you know and understand how your configs work before continuing
 
 1. Google and stackoverflow the error message
 2. Check your dependencies and environments
-3. Report with the plugin author
+3. Report to the plugin author
 
 If you want to experience with this dotfiles it's pretty easy to do. Firstly you should backup all your config files in one place to keep it safe. Then fork this repo and clone to your local system and play with it anyway you want.
 
