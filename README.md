@@ -7,23 +7,37 @@ Adopting the [LazyVim](https://www.lazyvim.org/) philosophy, this configuration 
 <details>
   <summary><b>Status Line</b></summary>
   <div>Parts include git status, diagnostics, current buffer path, class, function working on, copilot status, cursor position.</div>
-<img src="./_media/statusline.png"/>
+  <img src="./_media/statusline.png"/>
 </details>
 
 <details>
   <summary><b>Buffer Line</b></summary>
   <div>Shows buffer list, diagnostics.</div>
-<img src="./_media/bufferline.png"/>
+  <img src="./_media/bufferline.png"/>
 </details>
 
 <details>
   <summary><b>Diagnostics</b></summary>
-<img src="./_media/diagnostics.png"/>
+  <img src="./_media/diagnostics.png"/>
 </details>
 
 <details>
   <summary><b>Fuzzy Finder</b></summary>
+  <div>Quick find files with Fuzzy Finder.</div>
   <video src="https://github.com/user-attachments/assets/48978c4e-139e-44cb-bd26-9df4fa561141"></video>
+</details>
+
+<details>
+  <summary><b>Git Blame when hover line</b></summary>
+  <img src="./_media/gitblame.png"/>
+</details>
+
+<details>
+  <summary><b>Rename</b></summary>
+  <div>Rename all in current file.</div>
+  <video src=""></video>
+  <div>Rename all workspace.</div>
+  <video src=""></video>
 </details>
 
 ### My personal environment
@@ -92,6 +106,13 @@ nvim
 ```
 
 ## Configuration
+
+To get into Neovim faster, you can set alias in your shell config file:
+
+```bash
+alias n='nvim .' # run neovim in current directory
+alias nv='nvim' # run neovim with special file, e.g `nvim init.vim`
+```
 
 ## Usage
 
