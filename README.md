@@ -35,9 +35,9 @@ Adopting the [LazyVim](https://www.lazyvim.org/) philosophy, this configuration 
 <details>
   <summary><b>Rename</b></summary>
   <div>Rename all in current file.</div>
-  <video src=""></video>
+  <video src="https://github.com/user-attachments/assets/2421f330-d236-4573-803d-f135b7188f97"></video>
   <div>Rename all workspace.</div>
-  <video src=""></video>
+  <video src="https://github.com/user-attachments/assets/f53aea46-ec6d-4e4c-aeab-11bc1dbda1c0"></video>
 </details>
 
 ### My personal environment
