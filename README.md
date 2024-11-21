@@ -17,16 +17,29 @@ Adopting the [LazyVim](https://www.lazyvim.org/) philosophy, this configuration 
 </details>
 
 <details>
-  <summary><b>Diagnostics</b></summary>
-  <img src="./_media/diagnostics.png"/>
-</details>
-
-<details>
   <summary><b>Fuzzy Finder</b></summary>
   <div>Quickly find files with Fuzzy Finder.</div>
   <video src="https://github.com/user-attachments/assets/48978c4e-139e-44cb-bd26-9df4fa561141"></video>
   <div>Navigate between buffers, projects, history files.</div>
   <video src="https://github.com/user-attachments/assets/daefb235-8784-4637-9fdd-2d816c1314b7"></video>
+</details>
+
+<details>
+  <summary><b>LSP Features</b></summary>
+  <div>Code diagnostics (info, warning, error).</div>
+  <img src="./_media/diagnostics.png"/>
+  <div>Toggle Trouble to quick diagnostics navigation.</div>
+  <video src=""></video>
+  <div>Go to references.</div>
+  <video src=""></video>
+  <div>Code Action.</div>
+  <img src="./_media/codeaction.png"></img>
+  <div>Document.</div>
+  <img src="./_media/document.png"></img>
+  <div>LSP Progress.</div>
+  <img src="./_media/lspprogress.png"></img>
+  <div>Switch Python VENV.</div>
+  <video src=""></video>
 </details>
 
 <details>
@@ -46,8 +59,13 @@ Adopting the [LazyVim](https://www.lazyvim.org/) philosophy, this configuration 
   <summary><b>Code Autocomplete</b></summary>
   <div>Autosuggestion.</div>
   <video src="https://github.com/user-attachments/assets/140e102c-c758-436b-9dfb-b8c5a59c5d2c"></video>
-  <div>Copilot help.</div>
+  <div>Copilot help. Copilot also supports complete each word one by one.</div>
   <video src="https://github.com/user-attachments/assets/21d74e60-e32a-43bf-9950-5aa34cf1fc75"></video>
+</details>
+
+<details>
+  <summary><b>Rainbow brackets</b></summary>
+  <img src="./_media/rainbowbrackets.png"/>
 </details>
 
 ### My personal environment
