@@ -1,5 +1,17 @@
 # Lelouvincx's Neovim Configuration
 
+## Screenshots
+
+![](./_media/featured_1.png)
+
+![](./_media/featured_2.png)
+
+![](./_media/featured_3.png)
+
+![](./_media/featured_4.png)
+
+![](./_media/featured_5.png)
+
 ## Features
 
 Adopting the [LazyVim](https://www.lazyvim.org/) philosophy, this configuration is designed to be simple, clean, and easy to use. It is focused on providing a great experience for coding in Python, Javascript, Typescript, Java, SQL, Bash, Ruby, and more.
