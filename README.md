@@ -165,7 +165,7 @@ Currently I'm using Neovim as my main IDE for developing data engineering platfo
 
 ![](./_media/mylaptop.jpg)
 
-- **Laptop**: Macbook Pro 2024 M4-Pro 14-inch/Thinkbook 14
+- **Laptop**: Macbook Pro 2024 M3 14-inch/Thinkbook 14
 - **Keyboard**: NuPhy Air75
 - **OS**: MacOS/Ubuntu 24.04 LTS
 - **Terminal**: iTerm2, Alacritty
