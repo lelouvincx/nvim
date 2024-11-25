@@ -226,6 +226,10 @@ Start Neovim!:
 nvim
 ```
 
+Then the LazyVim will automatically install all the plugins and dependencies for you. If you want to install them manually, you can run `<space> + L` then press `I` to install.
+
+There will be another window pop up to login to your Github account to get the Copilot token. After that, you can chat with Copilot by pressing `<space> + a + a`.
+
 ## 5. Configuration
 
 To get into Neovim faster, you can set alias in your shell config file:
