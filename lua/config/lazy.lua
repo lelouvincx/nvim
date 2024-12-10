@@ -31,7 +31,7 @@ require("lazy").setup({
         -- extras ui
         { import = "lazyvim.plugins.extras.ui.mini-animate" },
         { import = "lazyvim.plugins.extras.ui.mini-indentscope" },
-        { import = "lazyvim.plugins.extras.ui.edgy" },
+        -- { import = "lazyvim.plugins.extras.ui.edgy" },
         { import = "lazyvim.plugins.extras.ui.treesitter-context" },
         -- extras lsp
         { import = "lazyvim.plugins.extras.lsp.none-ls" },
@@ -58,8 +58,8 @@ require("lazy").setup({
         lazy = true,
         -- It's recommended to leave version=false for now, since a lot the plugin that support versioning,
         -- have outdated releases, which may break your Neovim install.
-        version = false, -- always use the latest git commit
-        -- version = "*", -- try installing the latest stable version for plugins that support semver
+        -- version = false, -- always use the latest git commit
+        version = "*", -- try installing the latest stable version for plugins that support semver
     },
     install = { colorscheme = { "catppuccin" } },
     checker = { enabled = false }, -- automatically check for plugin updates

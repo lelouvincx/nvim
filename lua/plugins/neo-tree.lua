@@ -139,7 +139,7 @@ return {
             commands = {},
             window = {
                 position = "left",
-                width = 40,
+                width = 30,
                 mapping_options = {
                     noremap = true,
                     nowait = true,
@@ -218,7 +218,7 @@ return {
                 filtered_items = {
                     visible = false, -- when true, they will just be displayed differently than normal items
                     hide_dotfiles = true,
-                    hide_gitignored = false,
+                    hide_gitignored = true,
                     hide_hidden = true, -- only works on Windows for hidden files/directories
                     hide_by_name = {
                         "node_modules",
@@ -241,11 +241,11 @@ return {
                         "thumbs.db",
                     },
                     never_show_by_pattern = { -- uses glob style patterns
-                        -- ".null-ls_*",
+                        ".null-ls_*",
                     },
                 },
                 follow_current_file = {
-                    enabled = false, -- This will find and focus the file in the active buffer every time
+                    enabled = true, -- This will find and focus the file in the active buffer every time
                     --               -- the current file is changed while the tree is open.
                     leave_dirs_open = true, -- `false` closes auto expanded dirs, such as with `:Neotree reveal`
                 },
@@ -336,7 +336,8 @@ return {
                     },
                 },
             },
-            sources = { "filesystem", "buffers", "git_status" },
+            -- sources = { "filesystem", "buffers", "git_status" },
+            sources = { "filesystem", "buffers" },
         })
 
         vim.cmd([[nnoremap \ :Neotree reveal<cr>]])
