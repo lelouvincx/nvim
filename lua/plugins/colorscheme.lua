@@ -47,6 +47,8 @@ return {
                 treesitter = true,
                 treesitter_context = true,
                 which_key = true,
+                snacks = false,
+                blink_cmp = false, -- TODO: change this to true to enable blink.cmp
             },
         },
         specs = {

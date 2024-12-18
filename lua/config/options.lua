@@ -22,7 +22,13 @@ vim.g.ai_suggestion = true
 vim.g.ai_cmp = true
 
 -- Enable LSP Signature
-vim.g.lsp_signature = false
+vim.g.lsp_signature = true
 
 -- Enable remote
-vim.g.remote = true
+vim.g.remote = false
+
+-- Use telescope as the default picker
+vim.g.lazyvim_picker = "telescope"
+
+-- Use blink
+vim.g.lazyvim_blink_main = false

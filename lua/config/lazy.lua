@@ -15,6 +15,8 @@ require("lazy").setup({
         { import = "lazyvim.plugins.extras.ai.copilot-chat" },
         -- extras coding
         { import = "lazyvim.plugins.extras.coding.mini-surround" },
+        { import = "lazyvim.plugins.extras.coding.neogen" },
+        { import = "lazyvim.plugins.extras.coding.yanky" },
         -- extras dap
         { import = "lazyvim.plugins.extras.dap.core" },
         -- extras lang
@@ -42,6 +44,7 @@ require("lazy").setup({
         { import = "lazyvim.plugins.extras.editor.mini-diff" },
         { import = "lazyvim.plugins.extras.editor.aerial" },
         { import = "lazyvim.plugins.extras.editor.navic" },
+        { import = "lazyvim.plugins.extras.editor.telescope" },
         -- extras formatting
         { import = "lazyvim.plugins.extras.formatting.prettier" },
         { import = "lazyvim.plugins.extras.formatting.black" },
