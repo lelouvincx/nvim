@@ -1,5 +1,6 @@
 return {
     "lewis6991/gitsigns.nvim",
+    enabled = true,
     event = "LazyFile",
     opts = {
         signs = {
@@ -10,6 +11,15 @@ return {
             changedelete = { text = "▎" },
             untracked = { text = "▎" },
         },
+        signs_staged = {
+            add = { text = "▎" },
+            change = { text = "▎" },
+            delete = { text = "" },
+            topdelete = { text = "" },
+            changedelete = { text = "▎" },
+            untracked = { text = "┆" },
+        },
+        signs_staged_enable = true,
         current_line_blame = true, -- Toggle with `:Gitsigns toggle_current_line_blame`
         current_line_blame_opts = {
             virt_text = true,
@@ -20,12 +30,8 @@ return {
             use_focus = true,
         },
         current_line_blame_formatter = "<author>, <author_time:%R> - <summary>",
-        signs_staged = {
-            add = { text = "▎" },
-            change = { text = "▎" },
-            delete = { text = "" },
-            topdelete = { text = "" },
-            changedelete = { text = "▎" },
+        preview_config = {
+            border = "rounded",
         },
         on_attach = function(buffer)
             local gs = package.loaded.gitsigns
@@ -66,5 +72,4 @@ return {
       map("n", "<leader>gt", gs.toggle_current_line_blame, "Toggle current line blame")
         end,
     },
-    enabled = true,
 }
