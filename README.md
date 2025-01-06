@@ -230,18 +230,7 @@ Then the LazyVim will automatically install all the plugins and dependencies for
 
 There will be another window pop up to login to your Github account to get the Copilot token. After that, you can chat with Copilot by pressing `<space> + a + a`.
 
-## 5. Configuration
-
-To get into Neovim faster, you can set alias in your shell config file:
-
-```bash
-alias n='nvim .' # run neovim in current directory
-alias nv='nvim' # run neovim with special file, e.g `nvim init.vim`
-```
-
-(Writing...)
-
-## 6. Usage
+## 5. Usage
 
 Please make sure you know and understand how your configs work before continuing. Since this is just my personal working configurations, I don't provide any user support. Just look at it as a valuable references for your own configurations. If you run into any issues, you can try:
 
@@ -254,6 +243,17 @@ If you want to experience with this dotfiles it's pretty easy to do. Firstly you
 - Resource neovim config by saving then `:so%`. Or you can relaunch it.
 
 Many thanks for reading until here and enjoy your own dotfiles!
+
+## 6. Configuration
+
+To get into Neovim faster, you can set alias in your shell config file:
+
+```bash
+alias n='nvim .' # run neovim in current directory
+alias nv='nvim' # run neovim with special file, e.g `nvim init.vim`
+```
+
+(WIP Writing...)
 
 ## 7. Thanks to...
 
