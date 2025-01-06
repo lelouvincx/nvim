@@ -1,0 +1,58 @@
+name: Release
+on:
+  workflow_call:
+    inputs:
+      release:
+        description: "Release"
+        type: boolean
+        required: false
+        default: true
+
+jobs:
+  stylua:
+    name: Stylua Lint Check
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: JohnnyMorganz/stylua-action@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          version: latest
+          args: --check lua
+
+  release:
+    name: release
+    needs: stylua
+    if: ${{ !failure() && inputs.release && github.ref == 'refs/heads/main' }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: release-please config
+        id: release-please-config
+        run: |
+          if [ -f .github/release-please-config.json ]; then
+            echo "config-file=.github/release-please-config.json" >> $GITHUB_OUTPUT
+            [ -f .github/release-please-manifest.json ] &&
+              echo "manifest-file=.github/release-please-manifest.json" >> $GITHUB_OUTPUT
+            [ -f .github/.release-please-manifest.json ] &&
+              echo "manifest-file=.github/.release-please-manifest.json" >> $GITHUB_OUTPUT
+          else
+            echo "release-type=simple" >> $GITHUB_OUTPUT
+          fi
+          exit 0
+      - uses: googleapis/release-please-action@v4
+        id: release
+        with:
+          config-file: ${{ steps.release-please-config.outputs.config-file }}
+          manifest-file: ${{ steps.release-please-config.outputs.manifest-file }}
+          release-type: ${{ steps.release-please-config.outputs.release-type }}
+      - name: tag stable versions
+        if: ${{ steps.release.outputs.release_created }}
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email github-actions[bot]@users.noreply.github.com
+          git remote add gh-token "https://${{ secrets.GITHUB_TOKEN }}@github.com/google-github-actions/release-please-action.git"
+          git tag -d stable || true
+          git push origin :stable || true
+          git tag -a stable -m "Last Stable Release"
+          git push origin stable
