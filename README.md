@@ -3,19 +3,19 @@
 ## 1. Screenshots
 
 **Standard code editing** (with Neotree, Trouble, and mini view of functions):
-![](./_media/featured_1.png)
+![](https://public.lelouvincx.com/nvim.featured_1.png)
 
 **Telescope search**:
-![](./_media/featured_2.png)
+![](https://public.lelouvincx.com/nvim.featured_2.png)
 
 **Copilot Chat**:
-![](./_media/featured_3.png)
+![](https://public.lelouvincx.com/nvim.featured_3.png)
 
 **Debugging with Dap**:
-![](./_media/featured_4.png)
+![](https://public.lelouvincx.com/nvim.featured_4.png)
 
 **Multiple Languages supported**:
-![](./_media/featured_5.png)
+![](https://public.lelouvincx.com/nvim.featured_5.png)
 
 ## 2. Features
 
@@ -208,10 +208,10 @@ mv ~/.local/state/nvim{,.bak}
 mv ~/.cache/nvim{,.bak}
 ```
 
-Clone the repository:
+Clone the repository (use `--depth 1` to avoid downloading the heavy history):
 
 ```bash
-git clone https://github.com/lelouvincx/nvim.git ~/.config/nvim
+git clone https://github.com/lelouvincx/nvim.git ~/.config/nvim --depth 1
 ```
 
 (Optional) Remove the `.git` directory, so you can add it to your own repository later:
@@ -263,5 +263,5 @@ In general, I want to give thanks to everyone who shares their dotfiles for thei
 
 ## 8. About me
 
-- Visit my blog: [lelouvincx](https://lelouvincx.github.io)
+- Visit my blog: [lelouvincx](https://lelouvincx.com)
 - Email me: [dinhminhchinh3357@gmail.com](mailto:dinhminhchinh3357@gmail.com)
