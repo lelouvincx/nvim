@@ -1,5 +1,18 @@
 # Lelouvincx's Neovim Configuration
 
+[![Release](https://github.com/lelouvincx/nvim/actions/workflows/release.yml/badge.svg)](https://github.com/lelouvincx/nvim/actions/workflows/release.yml)
+
+- [Lelouvincx's Neovim Configuration](#lelouvincxs-neovim-configuration)
+  - [1. Screenshots](#1-screenshots)
+  - [2. Features](#2-features)
+    - [My personal environment](#my-personal-environment)
+  - [3. Requirements](#3-requirements)
+  - [4. Installation](#4-installation)
+  - [5. Usage](#5-usage)
+  - [6. Configuration](#6-configuration)
+  - [7. Thanks to...](#7-thanks-to)
+  - [8. About me](#8-about-me)
+
 ## 1. Screenshots
 
 **Standard code editing** (with Neotree, Trouble, and mini view of functions):
