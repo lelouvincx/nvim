@@ -85,6 +85,11 @@ return {
             ["<C-y>"] = { "select_and_accept" },
             ["<C-k>"] = { "select_prev", "fallback" },
             ["<C-j>"] = { "select_next", "fallback" },
+            ["<C-h>"] = {
+                function(cmp)
+                    cmp.show()
+                end,
+            },
         },
     },
 
