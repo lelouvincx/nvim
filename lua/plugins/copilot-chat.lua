@@ -41,7 +41,7 @@ return {
             -- Custom prompts
             prompts = {
                 Explain = {
-                    prompt = "> /COPILOT_EXPLAIN\n> #buffers\n\nCan you explain the following part of the code in detail?\nSpecifically:\n1. What is the purpose of this section?\n2. How does it work step-by-step?\n3. Are there any potential issues or limitations with this approach?",
+                    prompt = "> /COPILOT_EXPLAIN\n> #buffer\n\nCan you explain the following part of the code in detail?\nSpecifically:\n1. What is the purpose of this section?\n2. How does it work step-by-step?\n3. Are there any potential issues or limitations with this approach?",
                 },
                 Review = {
                     prompt = "> /COPILOT_REVIEW\n> #files\n\nPlease review the following code. Consider following criterias:\n1. Code quality and adherence to best practices\n2. Potential bugs or edge cases\n3. Performance optimizations\n4. Readability and maintainability\n5. Any security concerns\nSuggest improvements and explain your reasoning for each suggestion.",

@@ -3,6 +3,7 @@ return {
     cmd = "Copilot",
     build = ":Copilot auth",
     event = "InsertEnter",
+    enabled = vim.g.ai_suggestion,
     opts = {
         suggestion = {
             enabled = vim.g.ai_suggestion,
