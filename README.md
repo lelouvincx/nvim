@@ -32,7 +32,7 @@
 
 ## 2. Features
 
-Adopting the [LazyVim](https://www.lazyvim.org/) philosophy, this configuration is designed to be simple, clean, and easy to use. It is focused on providing a great experience for coding in Python, Javascript, Typescript, Java, SQL, Bash, Ruby, and more.
+Adopting the [LazyVim](https://www.lazyvim.org/) philosophy, this configuration is designed to be simple, clean, and easy to use. It is focused on providing a great experience for coding in Python, Javascript, Typescript, Java, SQL, Ruby, Bash, and more.
 
 <details>
   <summary><b>Status Line</b></summary>
