@@ -1,0 +1,26 @@
+name: "Notify Repository dotfiles"
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch: # Allows manual triggering from source repo lelouvincx/nvim
+
+jobs:
+  notify:
+    name: "Notify Repository dotfiles"
+    runs-on: ubuntu-latest
+
+    defaults:
+      run:
+        shell: bash
+
+    steps:
+      - name: "Call out Repository"
+        env:
+          PARENT_REPO: lelouvincx/dotfiles
+          PARENT_BRANCH: main
+          WORKFLOW_ID: 136915913 # ID of the workflow to trigger
+          # https://github.com/lelouvincx/dotfiles/actions/workflows/update-submodule.yml
+        run: |
+          curl -fL --retry 3 -X POST -H "Accept: application/vnd.github.v3+json" -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" https://api.github.com/repos/${{ env.PARENT_REPO }}/actions/workflows/${{ env.WORKFLOW_ID }}/dispatches -d '{"ref":"${{ env.PARENT_BRANCH }}"}'
