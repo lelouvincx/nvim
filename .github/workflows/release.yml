@@ -17,7 +17,7 @@ permissions:
 jobs:
   stylua:
     name: Stylua Lint Check
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v4
       - uses: JohnnyMorganz/stylua-action@v4
@@ -27,10 +27,10 @@ jobs:
           args: --check lua
 
   release:
-    name: release
+    name: Release
     needs: stylua
     if: ${{ !failure() && inputs.release && github.ref == 'refs/heads/main' }}
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v4
       - name: release-please config
