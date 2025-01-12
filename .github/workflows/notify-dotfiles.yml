@@ -1,4 +1,4 @@
-name: "Notify Repository dotfiles"
+name: "Notify repository dotfiles"
 
 on:
   push:
@@ -8,7 +8,7 @@ on:
 
 jobs:
   notify:
-    name: "Notify Repository dotfiles"
+    name: "Notify repository dotfiles"
     runs-on: ubuntu-latest
 
     defaults:
@@ -16,7 +16,7 @@ jobs:
         shell: bash
 
     steps:
-      - name: "Call out Repository"
+      - name: "Call out repository"
         env:
           PARENT_REPO: lelouvincx/dotfiles
           PARENT_BRANCH: main
