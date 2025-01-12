@@ -9,6 +9,9 @@ on:
         default: true
   schedule:
     - cron: "0 0 1 * *" # Schedule every month
+  push:
+    branches:
+      - main
 
 permissions:
   contents: write
@@ -52,6 +55,7 @@ jobs:
           config-file: ${{ steps.release-please-config.outputs.config-file }}
           manifest-file: ${{ steps.release-please-config.outputs.manifest-file }}
           release-type: ${{ steps.release-please-config.outputs.release-type }}
+          include-v-in-tag: true
       - name: tag stable versions
         if: ${{ steps.release.outputs.release_created }}
         run: |
