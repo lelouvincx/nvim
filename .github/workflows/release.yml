@@ -52,7 +52,6 @@ jobs:
           config-file: ${{ steps.release-please-config.outputs.config-file }}
           manifest-file: ${{ steps.release-please-config.outputs.manifest-file }}
           release-type: ${{ steps.release-please-config.outputs.release-type }}
-          include-component-in-tag: "v"
       - name: tag stable versions
         if: ${{ steps.release.outputs.release_created }}
         run: |
