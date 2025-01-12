@@ -1,0 +1,32 @@
+# You can refer README of this repo for future mantainances: https://github.com/actions/labeler
+automerge:
+  - changed-files:
+      - any-glob-to-any-file:
+          - .github/**/*
+          - docs/**/*
+          - after/**/*
+          - ftdetect/**/*
+          - lua/**/*
+          - README.md
+          - CONTRIBUTING.md
+
+config:
+  - changed-files:
+      - any-glob-to-any-file:
+          - lua/config/**/*
+
+lsp:
+  - changed-files:
+      - any-glob-to-any-file:
+          - lua/lsp/**/*
+
+plugins:
+  - changed-files:
+      - any-glob-to-any-file:
+          - lua/plugins/**/*
+
+filetype:
+  - changed-files:
+      - any-glob-to-any-file:
+          - after/ftplugin/**/*
+          - ftdetect/**/*
