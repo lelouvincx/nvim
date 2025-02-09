@@ -7,7 +7,7 @@ return {
         local user = vim.env.USER or "User"
         user = user:sub(1, 1):upper() .. user:sub(2)
         return {
-            model = "claude-3.5-sonnet",
+            model = "o3-mini",
             agent = "copilot",
             temperature = 0.1,
 
