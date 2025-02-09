@@ -1,5 +1,7 @@
 name: Release
+
 on:
+  # Trigger the workflow manually on push or pull request,
   workflow_dispatch:
     inputs:
       release:
@@ -27,16 +29,20 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           version: latest
-          args: --check lua
+          args: --check lua after
 
+  # Runs when the release input is true
+  # Main action: googleapis/release-please-action@v4
   release:
     name: Release
     needs: stylua
     if: ${{ !failure() && inputs.release && github.ref == 'refs/heads/main' }}
     runs-on: ubuntu-24.04
     steps:
-      - uses: actions/checkout@v4
-      - name: release-please config
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Config release-please
         id: release-please-config
         run: |
           if [ -f .github/release-please-config.json ]; then
@@ -49,6 +55,7 @@ jobs:
             echo "release-type=simple" >> $GITHUB_OUTPUT
           fi
           exit 0
+
       - uses: googleapis/release-please-action@v4
         id: release
         with:
