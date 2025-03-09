@@ -47,7 +47,6 @@ require("lazy").setup({
         { import = "lazyvim.plugins.extras.editor.telescope" },
         -- extras formatting
         { import = "lazyvim.plugins.extras.formatting.prettier" },
-        { import = "lazyvim.plugins.extras.formatting.black" },
         -- extras util
         { import = "lazyvim.plugins.extras.util.project" },
         { import = "lazyvim.plugins.extras.util.startuptime" },
