@@ -1,5 +1,22 @@
 # Changelog
 
+## [1.2.0](https://github.com/lelouvincx/nvim/compare/v1.1.0...v1.2.0) (2025-03-09)
+
+
+### Features
+
+* **copilot-chat:** add markdown renderer config and misc config ([042b05e](https://github.com/lelouvincx/nvim/commit/042b05ee1fc8ba206e102adf1feebf9ec98f3c34))
+* **copilot-chat:** bump model from o3-mini to claude-3.7-sonnet ([1107f19](https://github.com/lelouvincx/nvim/commit/1107f1974afecf0c870c77211ca3d15de106905e))
+* **copilot-chat:** update the LLM model from claude-3.5-sonnet to o3-mini ([38a0e63](https://github.com/lelouvincx/nvim/commit/38a0e63ad8d27631311fbdc79bcc9ac8a0dfbd01))
+* **filetype:** add filetype for envrc ([6d90e31](https://github.com/lelouvincx/nvim/commit/6d90e3113943d51f53e0463c723fc98456e368c5))
+* **formatter:** remove black as python formatter because now I use ruff ([cca3519](https://github.com/lelouvincx/nvim/commit/cca3519004172971342975b70f965965e03ad9ad))
+* **lazyvim:** bump lazyvim to version 8 ([915917f](https://github.com/lelouvincx/nvim/commit/915917f10d2add409d20334de03958f7a47049d3))
+
+
+### Bug Fixes
+
+* **blink:** correct blink config cmdline ([0cb156f](https://github.com/lelouvincx/nvim/commit/0cb156f1395b8e55b547106ba3c5f6dac2d27da1))
+
 ## [1.1.0](https://github.com/lelouvincx/nvim/compare/v1.0.0...v1.1.0) (2025-01-12)
 
 
