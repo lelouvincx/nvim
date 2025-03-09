@@ -2,6 +2,9 @@ name: "PR Assigner"
 on:
   pull_request:
     types: [opened, ready_for_review]
+    paths:
+      - "CHANGELOG.md"
+      - ".github/release-please-manifest.json"
 
 jobs:
   add-reviews:
