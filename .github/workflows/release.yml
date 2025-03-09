@@ -1,16 +1,13 @@
 name: Release
 
+# The workflow is triggerd by the following events:
+# - Manually by the user
+# - On a schedule every month
+# - On push from the branch release-please--branches--main
 on:
-  # Trigger the workflow manually on push or pull request,
   workflow_dispatch:
-    inputs:
-      release:
-        description: "Release"
-        type: boolean
-        required: false
-        default: true
   schedule:
-    - cron: "0 0 1 * *" # Schedule every month
+    - cron: "0 0 1 * *"
   push:
     branches:
       - main
@@ -36,7 +33,7 @@ jobs:
   release:
     name: Release
     needs: stylua
-    if: ${{ !failure() && inputs.release && github.ref == 'refs/heads/main' }}
+    if: ${{ !failure() && github.base_ref == 'refs/heads/main' && github.head_ref == 'release-please--branches--main' }}
     runs-on: ubuntu-24.04
     steps:
       - name: Checkout
