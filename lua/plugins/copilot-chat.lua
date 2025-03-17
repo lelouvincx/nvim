@@ -1,5 +1,3 @@
-local telescope = require("CopilotChat.integrations.telescope")
-
 -- Registers copilot-chat filetype for markdown rendering
 require("render-markdown").setup({
     file_types = { "markdown", "copilot-chat" },
@@ -23,7 +21,7 @@ return {
             callback = nil, -- Callback to use when ask response is received
 
             question_header = "  " .. user .. " ", -- Header to use for user questions
-            answer_header = "  Copilot ", -- Header to use for AI answers
+            answer_header = "  Copilot", -- Header to use for AI answers
             error_header = "> [!ERROR] Error",
             separator = "", -- Separator to use in chat
 
