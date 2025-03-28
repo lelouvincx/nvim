@@ -34,7 +34,7 @@ return {
                 ratio = 0.4,
             },
         },
-        auto_refresh = true,
+        auto_refresh = false,
         filetypes = {
             -- true
             python = true,
@@ -44,6 +44,8 @@ return {
             markdown = true,
             yaml = true,
             json = true,
+            lua = true,
+            sql = true,
             -- false
             help = false,
             gitcommit = false,
@@ -54,5 +56,20 @@ return {
             ["."] = false, -- all files without an extension
         },
         copilot_node_command = "node", -- Node.js version must be > 18.x
+        workspace_folders = {},
+        copilot_model = "gpt-4o-copilot", -- new completion model
+        should_attach = function(_, _)
+            if not vim.bo.buflisted then
+                print("not attaching, buffer is not 'buflisted'")
+                return false
+            end
+
+            if vim.bo.buftype ~= "" then
+                print("not attaching, buffer 'buftype' is " .. vim.bo.buftype)
+                return false
+            end
+
+            return true
+        end,
     },
 }
