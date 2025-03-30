@@ -69,6 +69,7 @@ return {
                 return false
             end
 
+            print("Copilot is attached!")
             return true
         end,
     },
