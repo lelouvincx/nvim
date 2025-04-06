@@ -63,14 +63,19 @@ return {
         },
 
         -- experimental signature help support
-        -- signature = { enabled = true },
+        signature = { enabled = true },
 
         sources = {
             -- adding any nvim-cmp sources here will enable them
             -- with blink.compat
-            compat = {},
+            compat = { "supermaven" },
             default = { "lsp", "path", "snippets", "buffer" },
             providers = {
+                supermaven = {
+                    kind = "Supermaven",
+                    score_offset = 50, -- show at a higher priority than lsp
+                    async = true,
+                },
                 lazydev = {
                     name = "LazyDev",
                     module = "lazydev.integrations.blink",

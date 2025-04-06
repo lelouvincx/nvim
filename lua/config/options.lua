@@ -18,7 +18,8 @@ vim.g.lazyvim_python_ruff = "ruff"
 vim.g.alt_send_esc = true
 
 -- Enable AI
-vim.g.ai_suggestion = true
+vim.g.copilot_suggestion = false
+vim.g.supermaven_suggestion = true
 vim.g.ai_cmp = true
 
 -- Enable LSP Signature

@@ -17,6 +17,7 @@ return {
         "hrsh7th/cmp-cmdline",
         "onsails/lspkind-nvim",
         "hrsh7th/cmp-emoji",
+        "supermaven-nvim",
     },
 
     -- Not all LSP servers add brackets when completing a function.
@@ -54,8 +55,10 @@ return {
                 ["<C-k>"] = cmp.mapping.select_prev_item(),
                 -- INFO: Super Tab
                 ["<Tab>"] = cmp.mapping(function(fallback)
-                    if require("copilot.suggestion").is_visible() then
-                        require("copilot.suggestion").accept()
+                    require("supermaven-nvim.completion_preview").suggestion_group = "SupermavenSuggestion"
+                    local suggestion = require("supermaven-nvim.completion_preview")
+                    if suggestion.has_suggestion() then
+                        suggestion.on_accept_suggestion()
                     elseif cmp.visible() then
                         cmp.select_next_item({ behavior = cmp.SelectBehavior.Insert })
                     elseif vim.snippet.active({ direction = 1 }) then
@@ -86,11 +89,12 @@ return {
                     "s",
                 }),
             }),
-            sources = cmp.config.sources({
+            sources = {
+                { name = "supermaven", group_index = 1, priority = 100 },
                 { name = "nvim_lsp" },
                 { name = "path" },
                 { name = "buffer" },
-            }),
+            },
             formatting = {
                 format = function(entry, item)
                     local icons = LazyVim.config.icons.kinds
@@ -129,13 +133,13 @@ return {
             },
             sorting = defaults.sorting, -- use default sorting
             -- NOTE: menu interation with copilot suggestion
-            cmp.event:on("menu_opened", function()
-                vim.b.copilot_suggestion_hidden = true
-            end),
+            -- cmp.event:on("menu_opened", function()
+            --     vim.b.copilot_suggestion_hidden = true
+            -- end),
 
-            cmp.event:on("menu_closed", function()
-                vim.b.copilot_suggestion_hidden = false
-            end),
+            -- cmp.event:on("menu_closed", function()
+            --     vim.b.copilot_suggestion_hidden = false
+            -- end),
         }
     end,
     main = "lazyvim.util.cmp",
