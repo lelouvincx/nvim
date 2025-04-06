@@ -19,7 +19,7 @@ return {
             cterm = 244,
         },
         log_level = "info", -- set to "off" to disable logging completely
-        disable_inline_completion = vim.g.ai_cmp,
+        disable_inline_completion = not vim.g.ai_cmp,
         disable_keymaps = false, -- disables built in keymaps for more manual control, default to false
         ignore_filetypes = { "bigfile", "snacks_input", "snacks_notif" },
         condition = function()
