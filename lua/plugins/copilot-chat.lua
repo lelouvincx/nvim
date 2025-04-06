@@ -18,7 +18,9 @@ return {
 
             temperature = 0.1,
             headless = false, -- Do not write to chat buffer and use history(useful for using callback for custom processing)
+            stream = nil, -- Function called when receiving stream updates (returned string is appended to the chat buffer)
             callback = nil, -- Callback to use when ask response is received
+            remember_as_sticky = true, -- Remember model/agent/context as sticky prompts when asking questions
 
             question_header = "  " .. user .. " ", -- Header to use for user questions
             answer_header = "  Copilot", -- Header to use for AI answers
@@ -50,31 +52,31 @@ return {
 
             -- Custom prompts
             prompts = {
-                explain = {
+                Explain = {
                     prompt = "> /COPILOT_EXPLAIN\n> #buffer\n\nThink step by step. Can you explain the following part of the code in detail?\nSpecifically:\n1. What is the purpose of this section?\n2. How does it work step-by-step?\n3. Are there any potential issues or limitations with this approach?",
                 },
-                review = {
+                Review = {
                     prompt = "> /COPILOT_REVIEW\n> #buffers\n\nPlease review the following code. Consider following criterias:\n1. Code quality and adherence to best practices\n2. Potential bugs or edge cases\n3. Performance optimizations\n4. Readability and maintainability\n5. Any security concerns\nSuggest improvements and explain your reasoning for each suggestion.",
                 },
-                fix = {
+                Fix = {
                     prompt = "> /COPILOT_GENERATE\n> #buffer\n\nThere is a problem in this code. Rewrite the code to show it with the bug fixed.",
                 },
-                optimize = {
+                Optimize = {
                     prompt = "> /COPILOT_GENERATE\n> #buffer\n\nHere's a piece of code that needs optimization. Please suggest optimizations to improve its performance. For each suggestion, explain the expected improvement and any trade-offs.",
                 },
-                optimizesql = {
+                Optimizesql = {
                     prompt = "> /COPILOT_GENERATE\n> #buffer\n\nI need to optimize the following SQL query.\nThe query is currently taking too long to execute on large datasets. Please:\n1. Analyze the query and identify potential performance issues.\n2. Suggest optimizations, which may include:\n- Rewriting the query\n- Adding or modifying indexes\n- Suggestions for schema changes if necessary\n3. Explain the reasoning behind each optimization.\n4. If possible, provide an estimate of the performance improvement we might expect.\nAdditional context:\n- Database system: {database_system}\n- Approximate table sizes: {table_size}\n- Any relevant hardware constraints. It is your job to ask me about the database_system and table_size. Is it understood?",
                 },
-                docstring = {
+                Docstring = {
                     prompt = "> /COPILOT_GENERATE\n> #buffer\n\nGenerate appropriate comments and docstrings for the following code.\n\nFollow conventions for docstrings. Include:\n1. Brief description of the function/class\n2. Parameters and their types\n3. Return value and type\n4. Any exceptions that might be raised\n5. Usage examples if the function/class usage is not immediately obvious\n\nPlease use clear, concise language and include relevant code snippets where appropriate.",
                 },
-                tests = {
+                Tests = {
                     prompt = "> /COPILOT_GENERATE\n> #buffer\n\nGenerate unit tests for the following code snippet. Include tests for:\n1. Normal expected inputs\n2. Edge cases\n3. Invalid inputs",
                 },
-                commit = {
+                Commit = {
                     prompt = "> #git:staged\n\nWrite commit message for the change with commitizen convention. Make sure the title does not exceed 50 characters. Wrap the whole message in code block with language gitcommit.",
                 },
-                implement = {
+                Implement = {
                     prompt = "> /COPILOT_GENERATE\n> #buffer\n\nThink step by step. Based on what I have provided, I need to implement a specific functionality in. It's your task to ask me about the functionality, programming language, and key requirements.\n\nPlease consider:\n- Error handling\n- Edge cases\n- Performance optimization\nBest practices\nPlease do not unnecessarily remove any comments or code.\nGenerate the code with clear comments explaining the logic.",
                 },
             },
