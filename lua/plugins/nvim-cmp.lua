@@ -9,7 +9,7 @@ return {
     "hrsh7th/nvim-cmp",
     version = false, -- last release is way too old
     event = "InsertEnter",
-    enabled = false,
+    enabled = vim.g.cmp_enabled,
     dependencies = {
         "hrsh7th/cmp-nvim-lsp",
         "hrsh7th/cmp-buffer",
