@@ -10,6 +10,13 @@ return {
                         { find = "Supermaven" },
                     },
                 },
+                skip = false,
+            },
+            {
+                filter = {
+                    event = "notify",
+                    find = "method textDocument/documentHighlight is not supported",
+                },
                 skip = true,
             },
         })
