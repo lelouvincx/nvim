@@ -18,7 +18,7 @@ return {
         local lspconfig = require("lspconfig")
         -- INFO: Add the handlers to all the servers
         -- Need to add more when needed
-        local servers = { "lua_ls", "pyright", "ruff", "jdtls" }
+        local servers = { "lua_ls", "pyright", "ruff" }
 
         for _, lsp in ipairs(servers) do
             lspconfig[lsp].setup({ handlers = handlers })
