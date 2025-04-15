@@ -108,34 +108,34 @@ return {
             default = { "omni", "supermaven", "buffer", "snippets", "lsp", "path", "ripgrep", "dadbod", "env" },
             providers = {
                 -- INFO: score_offset list
-                -- omni: -6
-                -- supermaven: -5
+                -- omni: 6
+                -- supermaven: 5
+                -- path: 3
+                -- lsp: 0
                 -- buffer: -3
                 -- snippets: -1
-                -- lsp: 0
-                -- lazydev: 2
-                -- path: 3
-                -- ripgrep: 4
-                -- dadbod: 5
-                -- env: 6
+                -- lazydev: -2
+                -- ripgrep: -4
+                -- dadbod: -5
+                -- env: -6
                 omni = {
-                    score_offset = -6,
+                    score_offset = 6,
                 },
                 supermaven = {
                     name = "Supermaven",
                     module = "blink-cmp-supermaven",
-                    score_offset = -5,
+                    score_offset = 5,
                     async = true,
                 },
                 lazydev = {
                     name = "LazyDev",
                     module = "lazydev.integrations.blink",
-                    score_offset = 2,
+                    score_offset = -2,
                 },
                 ripgrep = {
                     name = "Ripgrep",
                     module = "blink-ripgrep",
-                    score_offset = 4,
+                    score_offset = -4,
                     -- options below are optional, these are the default values
                     opts = {
                         -- `min_keyword_length` only determines whether to show completion items in the menu,
@@ -161,12 +161,12 @@ return {
                 dadbod = {
                     kind = "DadBod",
                     module = "vim_dadbod_completion.blink",
-                    score_offset = 5,
+                    score_offset = -5,
                 },
                 env = {
                     name = "Env",
                     module = "blink-cmp-env",
-                    score_offset = 6,
+                    score_offset = -6,
                     --- @type blink-cmp-env.Options
                     opts = {
                         item_kind = require("blink.cmp.types").CompletionItemKind.Variable,
