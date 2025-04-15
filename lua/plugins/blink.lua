@@ -18,7 +18,9 @@ return {
             opts = {},
             version = not vim.g.lazyvim_blink_main and "*",
         },
-        "huijiro/blink-cmp-supermaven",
+        "huijiro/blink-cmp-supermaven", -- for supermaven completion
+        "bydlw98/blink-cmp-env", -- for env completion
+        "mikavilpas/blink-ripgrep.nvim", --for ripgrep completion
     },
 
     opts = {
@@ -35,10 +37,39 @@ return {
             use_nvim_cmp_as_default = false,
             -- set to 'mono' for 'Nerd Font Mono' or 'normal' for 'Nerd Font'
             -- adjusts spacing to ensure icons are aligned
-            nerd_font_variant = "mono",
-            kind_icons = vim.tbl_extend("keep", {
-                Color = "██", -- Use block instead of icon for color items to make swatches more usable
-            }, LazyVim.config.icons.kinds),
+            nerd_font_variant = "normal",
+            kind_icons = {
+                Text = "󰉿",
+                Method = "󰊕",
+                Function = "󰊕",
+                Constructor = "󰒓",
+
+                Field = "󰜢",
+                Variable = "󰆦",
+                Property = "󰖷",
+
+                Class = "󱡠",
+                Interface = "󱡠",
+                Struct = "󱡠",
+                Module = "󰅩",
+
+                Unit = "󰪚",
+                Value = "󰦨",
+                Enum = "󰦨",
+                EnumMember = "󰦨",
+
+                Keyword = "󰻾",
+                Constant = "󰏿",
+
+                Snippet = "󱄽",
+                Color = "󰏘",
+                File = "󰈔",
+                Reference = "󰬲",
+                Folder = "󰉋",
+                Event = "󱐋",
+                Operator = "󰪚",
+                TypeParameter = "󰬛",
+            },
         },
 
         completion = {
@@ -74,16 +105,22 @@ return {
             -- adding any nvim-cmp sources here will enable them
             -- with blink.compat
             per_filetype = { sql = { "dadbod" } },
+            default = { "omni", "supermaven", "buffer", "snippets", "lsp", "path", "ripgrep", "dadbod", "env" },
             providers = {
                 -- INFO: score_offset list
+                -- omni: -6
                 -- supermaven: -5
-                -- lazydev: -4
                 -- buffer: -3
                 -- snippets: -1
                 -- lsp: 0
+                -- lazydev: 2
                 -- path: 3
                 -- ripgrep: 4
                 -- dadbod: 5
+                -- env: 6
+                omni = {
+                    score_offset = -6,
+                },
                 supermaven = {
                     name = "Supermaven",
                     module = "blink-cmp-supermaven",
@@ -93,14 +130,13 @@ return {
                 lazydev = {
                     name = "LazyDev",
                     module = "lazydev.integrations.blink",
-                    score_offset = -4,
+                    score_offset = 2,
                 },
                 ripgrep = {
                     name = "Ripgrep",
-                    module = "blink-cmp-rg",
+                    module = "blink-ripgrep",
                     score_offset = 4,
                     -- options below are optional, these are the default values
-                    ---@type blink-cmp-rg.Options
                     opts = {
                         -- `min_keyword_length` only determines whether to show completion items in the menu,
                         -- not whether to trigger a search. And we only has one chance to search.
@@ -127,19 +163,42 @@ return {
                     module = "vim_dadbod_completion.blink",
                     score_offset = 5,
                 },
+                env = {
+                    name = "Env",
+                    module = "blink-cmp-env",
+                    score_offset = 6,
+                    --- @type blink-cmp-env.Options
+                    opts = {
+                        item_kind = require("blink.cmp.types").CompletionItemKind.Variable,
+                        show_braces = false,
+                        show_documentation_window = true,
+                    },
+                },
             },
         },
 
         keymap = {
             preset = "enter",
+            ["<C-h>"] = { "show" },
             ["<C-y>"] = { "select_and_accept" },
             ["<C-k>"] = { "select_prev", "fallback" },
             ["<C-j>"] = { "select_next", "fallback" },
-            ["<C-h>"] = {
+            ["<C-s>"] = { "show_signature" },
+            ["<C-S-j>"] = { "scroll_documentation_down" },
+            ["<C-S-k>"] = { "scroll_documentation_up" },
+            -- Super Tab
+            ["<Tab>"] = {
                 function(cmp)
-                    cmp.show()
+                    if cmp.snippet_active() then
+                        return cmp.accept()
+                    else
+                        return cmp.select_and_accept()
+                    end
                 end,
+                "snippet_forward",
+                "fallback",
             },
+            ["<S-Tab>"] = { "snippet_backward", "fallback" },
         },
 
         fuzzy = { implementation = "prefer_rust_with_warning" },
