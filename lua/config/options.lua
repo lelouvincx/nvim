@@ -17,10 +17,14 @@ vim.g.lazyvim_python_ruff = "ruff"
 -- Send ESC to the terminal to keep it from exiting
 vim.g.alt_send_esc = true
 
--- Enable nvim-cmp
-vim.g.cmp_enabled = true
+-- Enable nvim-cmp or blink
+-- should be one of nvim-cmp or blink, not both
+vim.g.cmp_enabled = false
+vim.g.blink_enabled = true
+vim.g.lazyvim_blink_main = true
 
 -- Enable AI
+-- shoule be one of copilot or supermaven, not both
 vim.g.copilot_suggestion = false
 vim.g.supermaven_suggestion = true
 vim.g.ai_cmp = true
@@ -33,6 +37,3 @@ vim.g.remote = false
 
 -- Use telescope as the default picker
 vim.g.lazyvim_picker = "telescope"
-
--- Use blink
-vim.g.lazyvim_blink_main = false

@@ -1,6 +1,8 @@
 return {
     "saghen/blink.cmp",
     version = not vim.g.lazyvim_blink_main and "*",
+    event = "InsertEnter",
+    enabled = vim.g.blink_enabled,
     build = vim.g.lazyvim_blink_main and "cargo build --release",
     opts_extend = {
         "sources.completion.enabled_providers",
@@ -16,8 +18,8 @@ return {
             opts = {},
             version = not vim.g.lazyvim_blink_main and "*",
         },
+        "huijiro/blink-cmp-supermaven",
     },
-    event = "InsertEnter",
 
     opts = {
         snippets = {
@@ -25,6 +27,7 @@ return {
                 return LazyVim.cmp.expand(snippet)
             end,
         },
+
         appearance = {
             -- sets the fallback highlight groups to nvim-cmp's highlight groups
             -- useful for when your theme doesn't support blink.cmp
@@ -32,54 +35,97 @@ return {
             use_nvim_cmp_as_default = false,
             -- set to 'mono' for 'Nerd Font Mono' or 'normal' for 'Nerd Font'
             -- adjusts spacing to ensure icons are aligned
-            nerd_font_variant = "normal",
+            nerd_font_variant = "mono",
             kind_icons = vim.tbl_extend("keep", {
                 Color = "██", -- Use block instead of icon for color items to make swatches more usable
             }, LazyVim.config.icons.kinds),
         },
+
         completion = {
-            accept = {
-                -- experimental auto-brackets support
-                auto_brackets = {
-                    enabled = true,
-                },
-            },
+            accept = {}, -- use all default https://cmp.saghen.dev/configuration/reference.html#completion-accept
             menu = {
                 border = "rounded",
                 draw = {
                     treesitter = { "lsp" },
                 },
+                scrollbar = false, -- dont show the scrollbar
+            },
+            list = {
+                max_items = 50,
             },
             documentation = {
                 auto_show = true,
-                auto_show_delay_ms = 200,
                 window = {
                     border = "rounded",
                 },
             },
             ghost_text = {
-                enabled = vim.g.ai_cmp,
+                enabled = vim.g.ai_cmp, -- only show for ai completion
             },
         },
 
         -- experimental signature help support
-        signature = { enabled = true },
+        signature = {
+            enabled = true,
+            window = { border = "rounded" },
+        },
 
         sources = {
             -- adding any nvim-cmp sources here will enable them
             -- with blink.compat
-            compat = { "supermaven" },
-            default = { "lsp", "path", "snippets", "buffer" },
+            per_filetype = { sql = { "dadbod" } },
             providers = {
+                -- INFO: score_offset list
+                -- supermaven: -5
+                -- lazydev: -4
+                -- buffer: -3
+                -- snippets: -1
+                -- lsp: 0
+                -- path: 3
+                -- ripgrep: 4
+                -- dadbod: 5
                 supermaven = {
-                    kind = "Supermaven",
-                    score_offset = 50, -- show at a higher priority than lsp
+                    name = "Supermaven",
+                    module = "blink-cmp-supermaven",
+                    score_offset = -5,
                     async = true,
                 },
                 lazydev = {
                     name = "LazyDev",
                     module = "lazydev.integrations.blink",
-                    score_offset = 100, -- show at a higher priority than lsp
+                    score_offset = -4,
+                },
+                ripgrep = {
+                    name = "Ripgrep",
+                    module = "blink-cmp-rg",
+                    score_offset = 4,
+                    -- options below are optional, these are the default values
+                    ---@type blink-cmp-rg.Options
+                    opts = {
+                        -- `min_keyword_length` only determines whether to show completion items in the menu,
+                        -- not whether to trigger a search. And we only has one chance to search.
+                        prefix_min_len = 3,
+                        get_command = function(context, prefix)
+                            return {
+                                "rg",
+                                "--no-config",
+                                "--json",
+                                "--word-regexp",
+                                "--ignore-case",
+                                "--",
+                                prefix .. "[\\w_-]+",
+                                vim.fs.root(0, ".git") or vim.fn.getcwd(),
+                            }
+                        end,
+                        get_prefix = function(context)
+                            return context.line:sub(1, context.cursor[2]):match("[%w_-]+$") or ""
+                        end,
+                    },
+                },
+                dadbod = {
+                    kind = "DadBod",
+                    module = "vim_dadbod_completion.blink",
+                    score_offset = 5,
                 },
             },
         },
@@ -95,6 +141,8 @@ return {
                 end,
             },
         },
+
+        fuzzy = { implementation = "prefer_rust_with_warning" },
     },
 
     ---@param opts blink.cmp.Config | { sources: { compat: string[] } }
@@ -131,7 +179,7 @@ return {
         -- Unset custom prop to pass blink.cmp validation
         opts.sources.compat = nil
 
-        -- check if we need to override symbol kinds
+        -- Check if we need to override symbol kinds
         for _, provider in pairs(opts.sources.providers or {}) do
             ---@cast provider blink.cmp.SourceProviderConfig|{kind?:string}
             if provider.kind then
