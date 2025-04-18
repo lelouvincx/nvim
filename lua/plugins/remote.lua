@@ -4,6 +4,7 @@ return {
     enabled = vim.g.remote,
     lazy = true,
     event = "VeryLazy",
+    optional = true,
     dependencies = {
         "nvim-lua/plenary.nvim", -- For standard functions
         "MunifTanjim/nui.nvim", -- To build the plugin UI

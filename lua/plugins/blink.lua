@@ -21,14 +21,11 @@ return {
         "huijiro/blink-cmp-supermaven", -- for supermaven completion
         "bydlw98/blink-cmp-env", -- for env completion
         "mikavilpas/blink-ripgrep.nvim", --for ripgrep completion
+        { "L3MON4D3/LuaSnip", version = "v2.*" }, -- for luasnip completion
     },
 
     opts = {
-        snippets = {
-            expand = function(snippet, _)
-                return LazyVim.cmp.expand(snippet)
-            end,
-        },
+        snippets = { preset = "luasnip" },
 
         appearance = {
             -- sets the fallback highlight groups to nvim-cmp's highlight groups
@@ -107,17 +104,19 @@ return {
             per_filetype = { sql = { "dadbod" } },
             default = { "omni", "supermaven", "buffer", "snippets", "lsp", "path", "ripgrep", "dadbod", "env" },
             providers = {
-                -- INFO: score_offset list
-                -- omni: 6
-                -- supermaven: 5
-                -- path: 3
-                -- lsp: 0
-                -- buffer: -3
-                -- snippets: -1
-                -- lazydev: -2
-                -- ripgrep: -4
-                -- dadbod: -5
-                -- env: -6
+                --[[
+                INFO: score_offset order list:
+                - omni: 6
+                - supermaven: 5
+                - path: 3
+                - lsp: 0
+                - buffer: -3
+                - snippets: -1
+                - lazydev: -2
+                - ripgrep: -4
+                - dadbod: -5
+                - env: -6
+                ]]
                 omni = {
                     score_offset = 6,
                 },
@@ -186,7 +185,8 @@ return {
             ["<C-s>"] = { "show_signature" },
             ["<C-S-j>"] = { "scroll_documentation_down" },
             ["<C-S-k>"] = { "scroll_documentation_up" },
-            -- Super Tab
+            -- INFO: Super Tab
+            -- Description: Use <Tab> to select the next item in the completion menu, and <S-Tab> to select the previous item.
             ["<Tab>"] = {
                 function(cmp)
                     if cmp.snippet_active() then
