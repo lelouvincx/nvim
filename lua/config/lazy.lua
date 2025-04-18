@@ -44,6 +44,7 @@ require("lazy").setup({
         { import = "lazyvim.plugins.extras.editor.aerial" },
         { import = "lazyvim.plugins.extras.editor.navic" },
         { import = "lazyvim.plugins.extras.editor.telescope" },
+        { import = "lazyvim.plugins.extras.editor.fzf" },
         -- extras formatting
         { import = "lazyvim.plugins.extras.formatting.prettier" },
         -- extras util
