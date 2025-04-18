@@ -1,7 +1,6 @@
 return {
     "crnvl96/lazydocker.nvim",
     event = "VeryLazy",
-    optional = true,
     opts = {
         popup_window = {
             enter = true,
