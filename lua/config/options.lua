@@ -21,7 +21,6 @@ vim.g.alt_send_esc = true
 -- should be one of nvim-cmp or blink, not both
 vim.g.cmp_enabled = false
 vim.g.blink_enabled = true
-vim.g.lazyvim_blink_main = true
 
 -- Enable AI
 -- shoule be one of copilot or supermaven, not both

@@ -1,9 +1,9 @@
 return {
     "saghen/blink.cmp",
-    version = not vim.g.lazyvim_blink_main and "*",
+    version = not vim.g.blink_enabled and "*",
     event = "InsertEnter",
     enabled = vim.g.blink_enabled,
-    build = vim.g.lazyvim_blink_main and "cargo build --release",
+    build = vim.g.blink_enabled and "cargo build --release",
     opts_extend = {
         "sources.completion.enabled_providers",
         "sources.compat",
@@ -16,7 +16,7 @@ return {
             "saghen/blink.compat",
             optional = true, -- make optional so it's only enabled if any extras need it
             opts = {},
-            version = not vim.g.lazyvim_blink_main and "*",
+            version = not vim.g.blink_enabled and "*",
         },
         "huijiro/blink-cmp-supermaven", -- for supermaven completion
         "bydlw98/blink-cmp-env", -- for env completion
