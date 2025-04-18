@@ -11,7 +11,7 @@ return {
         local user = vim.env.USER or "User"
         user = user:sub(1, 1):upper() .. user:sub(2)
         return {
-            model = "claude-3.7-sonnet",
+            model = "gpt-4.1",
             agent = "copilot",
             context = nil, -- Default context or array of contexts to use (can be specified manually in prompt via #).
             sticky = nil, -- Default sticky prompt or array of sticky prompts to use at start of every new chat.
