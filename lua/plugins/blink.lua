@@ -35,38 +35,40 @@ return {
             -- set to 'mono' for 'Nerd Font Mono' or 'normal' for 'Nerd Font'
             -- adjusts spacing to ensure icons are aligned
             nerd_font_variant = "normal",
-            kind_icons = {
-                Text = "󰉿",
-                Method = "󰊕",
-                Function = "󰊕",
-                Constructor = "󰒓",
-
-                Field = "󰜢",
-                Variable = "󰆦",
-                Property = "󰖷",
-
-                Class = "󱡠",
-                Interface = "󱡠",
-                Struct = "󱡠",
-                Module = "󰅩",
-
-                Unit = "󰪚",
-                Value = "󰦨",
-                Enum = "󰦨",
-                EnumMember = "󰦨",
-
-                Keyword = "󰻾",
-                Constant = "󰏿",
-
-                Snippet = "󱄽",
-                Color = "󰏘",
-                File = "󰈔",
-                Reference = "󰬲",
-                Folder = "󰉋",
-                Event = "󱐋",
-                Operator = "󰪚",
-                TypeParameter = "󰬛",
-            },
+            -- Instead of using default icons, we use the ones from LazyVim
+            kind_icons = vim.tbl_extend(
+                "force",
+                require("blink.cmp.config.appearance").kind_icons or {},
+                LazyVim.config.icons.kinds
+            ),
+            -- INFO: Default kind_icons
+            -- kind_icons = {
+            --     Text = "󰉿",
+            --     Method = "󰊕",
+            --     Function = "󰊕",
+            --     Constructor = "󰒓",
+            --     Field = "󰜢",
+            --     Variable = "󰆦",
+            --     Property = "󰖷",
+            --     Class = "󱡠",
+            --     Interface = "󱡠",
+            --     Struct = "󱡠",
+            --     Module = "󰅩",
+            --     Unit = "󰪚",
+            --     Value = "󰦨",
+            --     Enum = "󰦨",
+            --     EnumMember = "󰦨",
+            --     Keyword = "󰻾",
+            --     Constant = "󰏿",
+            --     Snippet = "󱄽",
+            --     Color = "󰏘",
+            --     File = "󰈔",
+            --     Reference = "󰬲",
+            --     Folder = "󰉋",
+            --     Event = "󱐋",
+            --     Operator = "󰪚",
+            --     TypeParameter = "󰬛",
+            -- },
         },
 
         completion = {
