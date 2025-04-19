@@ -60,10 +60,14 @@ jobs:
 
       - name: Find the PR number
         if: ${{ steps.release.outputs.prs_created }}
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           echo "pull_request_number=$(gh pr list --head release-please--branches--main --json number --jq '.[0].number')" >> $GITHUB_OUTPUT
 
       - name: Assign github-actions[bot] to the PR
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           gh pr edit ${{ steps.release.outputs.pull_request_number }} --add-assignee github-actions[bot]
 
