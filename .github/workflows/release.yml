@@ -21,7 +21,9 @@ jobs:
     runs-on: ubuntu-24.04
 
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout
+        uses: actions/checkout@v4
+
       - uses: JohnnyMorganz/stylua-action@v4
         with:
           token: ${{ secrets.CI_TOKEN }}
@@ -44,8 +46,6 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
 
       - name: Config release-please
         id: release-please-config
@@ -94,32 +94,45 @@ jobs:
   tag-stable-versions:
     name: Tag stable versions
     needs: release
-    if: ${{ !failure() }}
+    if: ${{ needs.release.outputs.release_created == 'true' }}
     runs-on: ubuntu-24.04
 
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Tag Stable Versions
+      - name: Print release information
+        run: |
+          echo "Major version: ${{ needs.release.outputs.major }}"
+          echo "Minor version: ${{ needs.release.outputs.minor }}"
+
+      - name: Tag stable version
         env:
           RELEASE_MAJOR: ${{ needs.release.outputs.major }}
           RELEASE_MINOR: ${{ needs.release.outputs.minor }}
           GITHUB_TOKEN: ${{ secrets.CI_TOKEN }}
         run: |
-          git config user.name ubunchuu-admin[bot]
-          git config user.email 159746302+ubunchuu-admin@users.noreply.github.com
-          # Use https url with embedded token
-          git remote add gh-token "https://oauth2:${CI_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
-          # Delete existing tags
-          echo "Deleting existing tags ${RELEASE_MAJOR} and ${RELEASE_MAJOR}.${RELEASE_MINOR}"
-          git tag -d ${RELEASE_MAJOR} || true
-          git tag -d ${RELEASE_MAJOR}.${RELEASE_MINOR} || true
-          git push gh-token :${RELEASE_MAJOR} || true
-          git push gh-token :${RELEASE_MAJOR}.${RELEASE_MINOR} || true
-          # Create new tags
-          echo "Creating new tags ${RELEASE_MAJOR} and ${RELEASE_MAJOR}.${RELEASE_MINOR}"
-          git tag -a ${RELEASE_MAJOR} -m "chore(release): release v${RELEASE_MAJOR}"
-          git tag -a ${RELEASE_MAJOR}.${RELEASE_MINOR} -m "chore(release): release ${RELEASE_MAJOR}.${RELEASE_MINOR}"
-          git push gh-token ${RELEASE_MAJOR}
-          git push gh-token ${RELEASE_MAJOR}.${RELEASE_MINOR}
+          # Add v prefix to version numbers for consistency
+          MAJOR_TAG="v${RELEASE_MAJOR}"
+          MINOR_TAG="v${RELEASE_MAJOR}.${RELEASE_MINOR}"
+
+          # Configure git
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          # Use HTTPS URL with embedded token
+          git remote set-url origin https://x-access-token:${CI_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
+
+          # Delete existing tags if they exist
+          echo "Deleting existing tags $MAJOR_TAG and $MINOR_TAG"
+          git tag -d $MAJOR_TAG || true
+          git tag -d $MINOR_TAG || true
+          git push origin :refs/tags/$MAJOR_TAG || true
+          git push origin :refs/tags/$MINOR_TAG || true
+
+          # Create and push new tags
+          echo "Creating new tags $MAJOR_TAG and $MINOR_TAG"
+          git tag -a $MAJOR_TAG -m "chore(release): release $MAJOR_TAG"
+          git tag -a $MINOR_TAG -m "chore(release): release $MINOR_TAG"
+          git push origin $MAJOR_TAG
+          git push origin $MINOR_TAG
