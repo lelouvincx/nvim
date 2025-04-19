@@ -7,9 +7,6 @@ on:
   workflow_dispatch:
   schedule:
     - cron: "0 0 1 * *" # every month
-  push:
-    branches:
-      - main
   pull_request:
     branches:
       - release-please--branches--main
@@ -105,7 +102,7 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: tag stable versions
+      - name: Tag Stable Versions
         env:
           RELEASE_MAJOR: ${{ needs.release.outputs.major }}
           RELEASE_MINOR: ${{ needs.release.outputs.minor }}
