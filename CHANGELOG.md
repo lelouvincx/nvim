@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.2](https://github.com/lelouvincx/nvim/compare/v1.3.1...v1.3.2) (2025-04-19)
+
+
+### Bug Fixes
+
+* **release:** release-please version 4.2.0 ([4f6b1c0](https://github.com/lelouvincx/nvim/commit/4f6b1c0f75818bd277863ab7ce2c2cba7091d96d))
+
 ## [1.3.1](https://github.com/lelouvincx/nvim/compare/v1.3.0...v1.3.1) (2025-04-19)
 
 
