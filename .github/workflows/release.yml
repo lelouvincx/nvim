@@ -6,10 +6,13 @@ name: Release
 on:
   workflow_dispatch:
   schedule:
-    - cron: "0 0 1 * *" # every month (fixed the syntax)
+    - cron: "0 0 1 * *" # every month
   push:
     branches:
       - main
+  pull_request:
+    branches:
+      - release-please--branches--main
 
 permissions:
   contents: write
@@ -93,7 +96,7 @@ jobs:
   tag-stable-versions:
     name: Tag stable versions
     needs: release
-    if: ${{ !failure() && (github.base_ref == 'main' && github.head_ref == 'release-please--branches--main') || github.event_name == 'workflow_dispatch' }}
+    if: ${{ !failure() }}
     runs-on: ubuntu-24.04
 
     steps:
