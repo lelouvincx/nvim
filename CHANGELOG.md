@@ -1,5 +1,14 @@
 # Changelog
 
+## [1.3.1](https://github.com/lelouvincx/nvim/compare/v1.3.0...v1.3.1) (2025-04-19)
+
+
+### Bug Fixes
+
+* **release:** remove 'v' in tags ([8ac0d3e](https://github.com/lelouvincx/nvim/commit/8ac0d3ec76bd8bfce45f39a40cd0a00d8664ee27))
+* **release:** remove job tagging ([e1f32a6](https://github.com/lelouvincx/nvim/commit/e1f32a625cbc3bf47ef7dc88e92036816fe722fa))
+* update CI_TOKEN for all workflows ([924d2b2](https://github.com/lelouvincx/nvim/commit/924d2b2c87f73829d825873c6ccb2d10ce0dd193))
+
 ## [1.3.0](https://github.com/lelouvincx/nvim/compare/v1.2.0...v1.3.0) (2025-04-19)
 
 
