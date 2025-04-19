@@ -113,12 +113,12 @@ jobs:
           # Use https url with embedded token
           git remote add gh-token "https://oauth2:${CI_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
           # Delete existing tags
-          git tag -d v${RELEASE_MAJOR} || true
-          git tag -d v${RELEASE_MAJOR}.${RELEASE_MINOR} || true
-          git push gh-token :v${RELEASE_MAJOR} || true
-          git push gh-token :v${RELEASE_MAJOR}.${RELEASE_MINOR} || true
+          git tag -d ${RELEASE_MAJOR} || true
+          git tag -d ${RELEASE_MAJOR}.${RELEASE_MINOR} || true
+          git push gh-token :${RELEASE_MAJOR} || true
+          git push gh-token :${RELEASE_MAJOR}.${RELEASE_MINOR} || true
           # Create new tags
-          git tag -a v${RELEASE_MAJOR} -m "chore(release): release v${RELEASE_MAJOR}"
-          git tag -a v${RELEASE_MAJOR}.${RELEASE_MINOR} -m "chore(release): release v${RELEASE_MAJOR}.${RELEASE_MINOR}"
-          git push gh-token v${RELEASE_MAJOR}
-          git push gh-token v${RELEASE_MAJOR}.${RELEASE_MINOR}
+          git tag -a ${RELEASE_MAJOR} -m "chore(release): release v${RELEASE_MAJOR}"
+          git tag -a ${RELEASE_MAJOR}.${RELEASE_MINOR} -m "chore(release): release ${RELEASE_MAJOR}.${RELEASE_MINOR}"
+          git push gh-token ${RELEASE_MAJOR}
+          git push gh-token ${RELEASE_MAJOR}.${RELEASE_MINOR}
