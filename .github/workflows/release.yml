@@ -28,12 +28,10 @@ jobs:
           version: latest
           args: --check lua after
 
-  # Runs when the release input is true
-  # Main action: googleapis/release-please-action@v4
   release:
     name: Release
     needs: stylua
-    if: ${{ !failure() && github.base_ref == 'refs/heads/main' && github.head_ref == 'release-please--branches--main' }}
+    if: ${{ !failure() }}
     runs-on: ubuntu-24.04
     steps:
       - name: Checkout
@@ -59,6 +57,17 @@ jobs:
           config-file: ${{ steps.release-please-config.outputs.config-file }}
           manifest-file: ${{ steps.release-please-config.outputs.manifest-file }}
           release-type: ${{ steps.release-please-config.outputs.release-type }}
+
+  # INFO: Only run job when release is merged into main
+  tag-stable-versions:
+    name: Tag stable versions
+    needs: stylua
+    if: ${{ !failure() && github.base_ref == 'main' && github.head_ref == 'release-please--branches--main' }}
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
       - name: tag stable versions
         if: ${{ steps.release.outputs.release_created }}
         run: |
