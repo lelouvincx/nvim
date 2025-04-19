@@ -38,6 +38,7 @@ jobs:
       release_created: ${{ steps.release.outputs.release_created }}
       major: ${{ steps.release.outputs.major }}
       minor: ${{ steps.release.outputs.minor }}
+      patch: ${{ steps.release.outputs.patch }}
       pr_number: ${{ steps.find_pr.outputs.pull_request_number }}
 
     steps:
@@ -99,8 +100,6 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
 
       - name: Tag Stable Versions
         env:
@@ -113,11 +112,13 @@ jobs:
           # Use https url with embedded token
           git remote add gh-token "https://oauth2:${CI_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
           # Delete existing tags
+          echo "Deleting existing tags ${RELEASE_MAJOR} and ${RELEASE_MAJOR}.${RELEASE_MINOR}"
           git tag -d ${RELEASE_MAJOR} || true
           git tag -d ${RELEASE_MAJOR}.${RELEASE_MINOR} || true
           git push gh-token :${RELEASE_MAJOR} || true
           git push gh-token :${RELEASE_MAJOR}.${RELEASE_MINOR} || true
           # Create new tags
+          echo "Creating new tags ${RELEASE_MAJOR} and ${RELEASE_MAJOR}.${RELEASE_MINOR}"
           git tag -a ${RELEASE_MAJOR} -m "chore(release): release v${RELEASE_MAJOR}"
           git tag -a ${RELEASE_MAJOR}.${RELEASE_MINOR} -m "chore(release): release ${RELEASE_MAJOR}.${RELEASE_MINOR}"
           git push gh-token ${RELEASE_MAJOR}
