@@ -5,7 +5,6 @@ return {
     dependencies = { "saghen/blink.compat" },
     cmd = {
         "SupermavenUseFree",
-        "SupermavenUsePro",
     },
     opts = {
         keymaps = {
