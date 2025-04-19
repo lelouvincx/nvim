@@ -73,6 +73,7 @@ jobs:
       # FIX: does not found major and minor version
       - name: Print release information
         run: |
+          echo "Release created: ${{ steps.release.outputs.release_created }}"
           echo "Major version: ${{ steps.release.outputs.major }}"
           echo "Minor version: ${{ steps.release.outputs.minor }}"
 
