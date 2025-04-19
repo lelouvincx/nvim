@@ -58,6 +58,15 @@ jobs:
           manifest-file: ${{ steps.release-please-config.outputs.manifest-file }}
           release-type: ${{ steps.release-please-config.outputs.release-type }}
 
+      - name: Find the PR number
+        if: ${{ steps.release.outputs.prs_created }}
+        run: |
+          echo "pull_request_number=$(gh pr list --head release-please--branches--main --json number --jq '.[0].number')" >> $GITHUB_OUTPUT
+
+      - name: Assign github-actions[bot] to the PR
+        run: |
+          gh pr edit ${{ steps.release.outputs.pull_request_number }} --add-assignee github-actions[bot]
+
   # INFO: Only run job when release is merged into main
   tag-stable-versions:
     name: Tag stable versions
