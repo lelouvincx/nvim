@@ -75,7 +75,7 @@ jobs:
   tag-stable-versions:
     name: Tag stable versions
     needs: stylua
-    if: ${{ !failure() && github.base_ref == 'main' && github.head_ref == 'release-please--branches--main' }}
+    if: ${{ !failure() && (github.base_ref == 'main' && github.head_ref == 'release-please--branches--main') || github.event_name == 'workflow_dispatch' }}
     runs-on: ubuntu-24.04
     steps:
       - name: Checkout
