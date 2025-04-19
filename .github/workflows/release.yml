@@ -1,5 +1,4 @@
 name: Release
-
 # The workflow is triggerd by the following events:
 # - Manually by the user
 # - On a schedule every month
@@ -7,7 +6,7 @@ name: Release
 on:
   workflow_dispatch:
   schedule:
-    - cron: "0 0 1 * *" # every month
+    - cron: "0 0 1 * *" # every month (fixed the syntax)
   push:
     branches:
       - main
@@ -20,6 +19,7 @@ jobs:
   stylua:
     name: Stylua Lint Check
     runs-on: ubuntu-24.04
+
     steps:
       - uses: actions/checkout@v4
       - uses: JohnnyMorganz/stylua-action@v4
@@ -33,9 +33,12 @@ jobs:
     needs: stylua
     if: ${{ !failure() }}
     runs-on: ubuntu-24.04
+
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Config release-please
         id: release-please-config
@@ -54,44 +57,53 @@ jobs:
       - uses: googleapis/release-please-action@v4
         id: release
         with:
+          token: ${{ secrets.GITHUB_TOKEN }}
           config-file: ${{ steps.release-please-config.outputs.config-file }}
           manifest-file: ${{ steps.release-please-config.outputs.manifest-file }}
           release-type: ${{ steps.release-please-config.outputs.release-type }}
 
       - name: Find the PR number
         if: ${{ steps.release.outputs.prs_created }}
+        id: find_pr
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           echo "pull_request_number=$(gh pr list --head release-please--branches--main --json number --jq '.[0].number')" >> $GITHUB_OUTPUT
 
       - name: Assign github-actions[bot] to the PR
+        if: ${{ steps.release.outputs.prs_created }}
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          gh pr edit ${{ steps.release.outputs.pull_request_number }} --add-assignee github-actions[bot]
+          gh pr edit ${{ steps.find_pr.outputs.pull_request_number }} --add-assignee github-actions[bot]
 
   # INFO: Only run job when release is merged into main
   tag-stable-versions:
     name: Tag stable versions
-    needs: stylua
-    if: ${{ !failure() && (github.base_ref == 'main' && github.head_ref == 'release-please--branches--main') || github.event_name == 'workflow_dispatch' }}
+    needs: release
+    if: ${{ steps.release.outputs.release_created }}
     runs-on: ubuntu-24.04
+
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: tag stable versions
-        if: ${{ steps.release.outputs.release_created }}
+        env:
+          RELEASE_MAJOR: ${{ needs.release.outputs.major }}
+          RELEASE_MINOR: ${{ needs.release.outputs.minor }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           git config user.name ubunchuu-admin[bot]
           git config user.email 159746302+ubunchuu-admin@users.noreply.github.com
-          git remote add gh-token "https://${{ secrets.GITHUB_TOKEN }}@github.com/google-github-actions/release-please-action.git"
-          git tag -d v${{ steps.release.outputs.major }} || true
-          git tag -d v${{ steps.release.outputs.major }}.${{ steps.release.outputs.minor }} || true
-          git push origin :v${{ steps.release.outputs.major }} || true
-          git push origin :v${{ steps.release.outputs.major }}.${{ steps.release.outputs.minor }} || true
-          git tag -a v${{ steps.release.outputs.major }} -m "chore(release): release v${{ steps.release.outputs.major }}"
-          git tag -a v${{ steps.release.outputs.major }}.${{ steps.release.outputs.minor }} -m "chore(release): release v${{ steps.release.outputs.major }}.${{ steps.release.outputs.minor }}"
-          git push origin v${{ steps.release.outputs.major }}
-          git push origin v${{ steps.release.outputs.major }}.${{ steps.release.outputs.minor }}
+          git remote add gh-token "https://oauth2:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
+          git tag -d v${RELEASE_MAJOR} || true
+          git tag -d v${RELEASE_MAJOR}.${RELEASE_MINOR} || true
+          git push gh-token :v${RELEASE_MAJOR} || true
+          git push gh-token :v${RELEASE_MAJOR}.${RELEASE_MINOR} || true
+          git tag -a v${RELEASE_MAJOR} -m "chore(release): release v${RELEASE_MAJOR}"
+          git tag -a v${RELEASE_MAJOR}.${RELEASE_MINOR} -m "chore(release): release v${RELEASE_MAJOR}.${RELEASE_MINOR}"
+          git push gh-token v${RELEASE_MAJOR}
+          git push gh-token v${RELEASE_MAJOR}.${RELEASE_MINOR}
