@@ -202,8 +202,6 @@ return {
             },
             ["<S-Tab>"] = { "snippet_backward", "fallback" },
         },
-
-        fuzzy = { implementation = "prefer_rust_with_warning" },
     },
 
     ---@param opts blink.cmp.Config | { sources: { compat: string[] } }
