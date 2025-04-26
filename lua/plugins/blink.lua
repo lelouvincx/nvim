@@ -24,6 +24,8 @@ return {
         { "L3MON4D3/LuaSnip", version = "v2.*" }, -- for luasnip completion
     },
 
+    ---@module 'blink.cmp'
+    ---@type blink.cmp.Config
     opts = {
         snippets = { preset = "luasnip" },
 
