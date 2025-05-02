@@ -1,5 +1,13 @@
 return {
     "neovim/nvim-lspconfig",
+    dependencies = {
+        "SmiteshP/nvim-navbuddy", -- Provides breakcrumbs for better navigation
+        dependencies = {
+            "SmiteshP/nvim-navic",
+            "MunifTanjim/nui.nvim",
+        },
+        opts = { lsp = { auto_attach = true } },
+    },
     opts = function()
         -- Add the border on hover and on signature help popup window
         local handlers = {
