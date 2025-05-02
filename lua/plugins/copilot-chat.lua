@@ -7,6 +7,7 @@ return {
     "CopilotC-Nvim/CopilotChat.nvim",
     branch = "canary",
     cmd = "CopilotChat",
+    enabled = false, -- INFO: temporary disable copilot-chat
     opts = function()
         local user = vim.env.USER or "User"
         user = user:sub(1, 1):upper() .. user:sub(2)
