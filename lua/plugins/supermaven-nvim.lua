@@ -22,7 +22,7 @@ return {
         disable_keymaps = false, -- disables built in keymaps for more manual control, default to false
         ignore_filetypes = { "bigfile", "snacks_input", "snacks_notif" },
         condition = function()
-            print(" Supermaven is attached ")
+            print(" Attached Supermaven ")
             return false
         end,
     },
