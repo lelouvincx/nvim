@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.4.0](https://github.com/lelouvincx/nvim/compare/v1.3.3...v1.4.0) (2025-06-01)
+
+
+### Features
+
+* **avante:** initialize plugin avante - for cursor-like AI chat ([f9b6262](https://github.com/lelouvincx/nvim/commit/f9b6262e09585e6ef7e24b60c0f26f3db11f0b67))
+* **lspconfig:** add nvim-navbuddy for better navigation ([80243ad](https://github.com/lelouvincx/nvim/commit/80243ad639f497543a378752ba3358c9e3694265))
+
 ## [1.3.3](https://github.com/lelouvincx/nvim/compare/v1.3.2...v1.3.3) (2025-05-01)
 
 
