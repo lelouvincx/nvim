@@ -7,6 +7,7 @@ return {
         auto_suggestions_provider = "openai",
         providers = {
             openai = {
+                -- https://platform.openai.com/docs/models
                 endpoint = "https://api.openai.com/v1",
                 model = "gpt-4.1",
                 extra_request_body = {
