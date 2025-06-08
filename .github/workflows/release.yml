@@ -78,6 +78,7 @@ jobs:
           echo "Minor version: ${{ steps.release.outputs.minor }}"
 
       - name: Tag stable version
+        if: ${{ steps.release.outputs.release_created }}
         env:
           RELEASE_MAJOR: ${{ steps.release.outputs.major }}
           RELEASE_MINOR: ${{ steps.release.outputs.minor }}
