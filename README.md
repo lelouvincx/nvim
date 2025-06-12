@@ -182,7 +182,7 @@ Currently I'm using Neovim as my main IDE for developing data engineering platfo
 - **Keyboard**: NuPhy Air75
 - **OS**: MacOS/Ubuntu 24.04 LTS
 - **Terminal**: iTerm2, Alacritty
-- **Neovim**: v0.10.1
+- **Neovim**: v0.10.4
 - **Tmux**: 3.4
 - **Font**: JetBrainsMono Nerd Font Mono
 - **Theme**: Catppuccin
@@ -191,13 +191,14 @@ Currently I'm using Neovim as my main IDE for developing data engineering platfo
 
 ## 3. Requirements
 
-- Neovim >= **0.9.0** (needs to be built with **LuaJIT**)
+- Neovim >= **0.10.0** (needs to be built with **LuaJIT**)
 - Git >= **2.19.0** (for partial clones support)
 - [LazyVim](https://www.lazyvim.org/)
 - a [Nerd Font](https://www.nerdfonts.com/)(v3.0 or greater) **_(optional, but needed to display some icons)_**, recommended is JetBrainsMono Nerd Font Mono
 - [lazygit](https://github.com/jesseduffield/lazygit) **_(optional)_**
 - [lazydocker](https://github.com/jesseduffield/lazydocker) **_(optional)_**
 - a **C** compiler for `nvim-treesitter`. See [here](https://github.com/nvim-treesitter/nvim-treesitter#requirements)
+- rust (stable version), can install via mise
 - for [telescope.nvim](https://github.com/nvim-telescope/telescope.nvim) **_(optional)_**
   - **live grep**: [ripgrep](https://github.com/BurntSushi/ripgrep)
   - **find files**: [fd](https://github.com/sharkdp/fd)
