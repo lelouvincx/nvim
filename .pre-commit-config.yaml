@@ -30,6 +30,7 @@ repos:
     rev: v2.3.0
     hooks:
       - id: codespell
+        name: Check for common misspellings in text files
         args: ["--skip", "node_modules,dist"] # Exclude folders if needed
         files: "\\.(py|js|ts)$" # Regex to match Python, JavaScript, and TypeScript files
 
@@ -38,6 +39,7 @@ repos:
     rev: 0.29.4
     hooks:
       - id: check-github-workflows
+        name: Check GitHub Workflows
         args: ["--verbose"]
 
   # This checks for any potential detecting and preventing hardcoded secrets like
@@ -47,19 +49,12 @@ repos:
     rev: v8.14.1
     hooks:
       - id: gitleaks
-
-  - repo: https://github.com/kynan/nbstripout
-    rev: 0.8.1
-    hooks:
-      - id: nbstripout
-        args:
-          [
-            '--extra-keys="metadata.celltoolbar cell.metadata.heading_collapsed"',
-          ]
+        name: Check for hardcoded secrets
 
   # Config stylua check
   - repo: https://github.com/JohnnyMorganz/StyLua
     rev: v2.0.2
     hooks:
       - id: stylua
+        name: Check Lua Style
         args: ["--check", "lua"]
