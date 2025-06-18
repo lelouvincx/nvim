@@ -3,7 +3,7 @@ return {
     version = not vim.g.blink_enabled and "*",
     event = "InsertEnter",
     enabled = vim.g.blink_enabled,
-    build = vim.g.blink_enabled and "cargo build --release",
+    build = vim.g.blink_enabled and "RUSTUP_TOOLCHAIN=nightly cargo build --release",
     opts_extend = {
         "sources.completion.enabled_providers",
         "sources.compat",
