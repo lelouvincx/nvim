@@ -5,13 +5,14 @@ return {
     enabled = not vim.g.copilot_chat,
     opts = {
         auto_suggestions_provider = "openai",
+        provider = "openai",
         providers = {
             openai = {
                 -- https://platform.openai.com/docs/models
                 endpoint = "https://api.openai.com/v1",
                 model = "gpt-4.1",
                 extra_request_body = {
-                    timeout = 60000,
+                    timeout = 60000, -- 1 minute
                     temperature = 0,
                     max_completion_tokens = 128000,
                 },
@@ -21,7 +22,7 @@ return {
                 endpoint = "https://api.anthropic.com",
                 model = "claude-sonnet-4-20250514",
                 extra_request_body = {
-                    timeout = 60000,
+                    timeout = 60000, -- 1 minute
                     temperature = 0,
                     max_completion_tokens = 64000,
                 },
@@ -30,7 +31,7 @@ return {
     },
     dual_boost = {
         -- INFO: choose openai first for speed, claude for accuracy
-        enabled = true,
+        enabled = false,
         first_provider = "openai",
         second_provider = "claude",
         prompt = "Based on the two reference outputs below, generate a response that incorporates elements from both but reflects your own judgment and unique perspective. Do not provide any explanation, just give the response directly. Reference Output 1: [{{provider1_output}}], Reference Output 2: [{{provider2_output}}]",
@@ -66,7 +67,6 @@ return {
     -- build = "powershell -ExecutionPolicy Bypass -File Build.ps1 -BuildFromSource false" -- for windows
     dependencies = {
         "nvim-treesitter/nvim-treesitter",
-        "stevearc/dressing.nvim",
         "nvim-lua/plenary.nvim",
         "MunifTanjim/nui.nvim",
         --- The below dependencies are optional,
@@ -74,6 +74,8 @@ return {
         "nvim-telescope/telescope.nvim", -- for file_selector provider telescope
         "hrsh7th/nvim-cmp", -- autocompletion for avante commands and mentions
         "ibhagwan/fzf-lua", -- for file_selector provider fzf
+        "stevearc/dressing.nvim",
+        "folke/snacks.nvim", -- for input provider snacks
         "nvim-tree/nvim-web-devicons", -- or echasnovski/mini.icons
         "zbirenbaum/copilot.lua", -- for providers='copilot'
         {
