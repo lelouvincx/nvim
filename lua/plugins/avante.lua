@@ -2,7 +2,7 @@ return {
     "yetone/avante.nvim",
     event = "VeryLazy",
     version = false, -- Never set this value to "*"! Never!
-    enabled = not vim.g.ai_chat,
+    enabled = (vim.g.ai_chat == "avante"),
     opts = {
         auto_suggestions_provider = "openai",
         provider = "openai",
