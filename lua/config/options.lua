@@ -27,7 +27,7 @@ vim.g.blink_enabled = true
 vim.g.copilot_suggestion = false
 vim.g.supermaven_suggestion = true
 vim.g.ai_cmp = true
-vim.g.copilot_chat = false -- INFO: disable copilot-chat, use avante instead
+vim.g.ai_chat = "claudecode" -- avante or claudecode
 
 -- Enable LSP Signature
 vim.g.lsp_signature = true
