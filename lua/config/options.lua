@@ -23,9 +23,8 @@ vim.g.cmp_enabled = false
 vim.g.blink_enabled = true
 
 -- Enable AI
--- shoule be one of copilot or supermaven, not both
+-- shoule be one of copilot
 vim.g.copilot_suggestion = false
-vim.g.supermaven_suggestion = true
 vim.g.ai_cmp = true
 vim.g.ai_chat = "claudecode" -- avante or claudecode
 
@@ -37,3 +36,6 @@ vim.g.remote = false
 
 -- Use telescope as the default picker
 vim.g.lazyvim_picker = "telescope"
+
+-- Expand claude config dir
+vim.env.CLAUDE_CONFIG_DIR = vim.fn.expand("~/.config/claude")

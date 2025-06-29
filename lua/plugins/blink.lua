@@ -18,7 +18,6 @@ return {
             opts = {},
             version = not vim.g.blink_enabled and "*",
         },
-        "huijiro/blink-cmp-supermaven", -- for supermaven completion
         "bydlw98/blink-cmp-env", -- for env completion
         "mikavilpas/blink-ripgrep.nvim", --for ripgrep completion
         { "L3MON4D3/LuaSnip", version = "v2.*" }, -- for luasnip completion
@@ -106,12 +105,11 @@ return {
             -- adding any nvim-cmp sources here will enable them
             -- with blink.compat
             per_filetype = { sql = { "dadbod" } },
-            default = { "omni", "supermaven", "buffer", "snippets", "lsp", "path", "ripgrep", "dadbod", "env" },
+            default = { "omni", "buffer", "snippets", "lsp", "path", "ripgrep", "dadbod", "env" },
             providers = {
                 --[[
                 INFO: score_offset order list:
                 - omni: 6
-                - supermaven: 5
                 - path: 3
                 - lsp: 0
                 - buffer: -3
@@ -123,12 +121,6 @@ return {
                 ]]
                 omni = {
                     score_offset = 6,
-                },
-                supermaven = {
-                    name = "Supermaven",
-                    module = "blink-cmp-supermaven",
-                    score_offset = 5,
-                    async = true,
                 },
                 lazydev = {
                     name = "LazyDev",

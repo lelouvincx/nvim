@@ -17,7 +17,6 @@ return {
         "hrsh7th/cmp-cmdline",
         "onsails/lspkind-nvim",
         "hrsh7th/cmp-emoji",
-        "supermaven-nvim",
     },
 
     -- Not all LSP servers add brackets when completing a function.
@@ -55,8 +54,9 @@ return {
                 ["<C-k>"] = cmp.mapping.select_prev_item(),
                 -- INFO: Super Tab
                 ["<Tab>"] = cmp.mapping(function(fallback)
-                    require("supermaven-nvim.completion_preview").suggestion_group = "SupermavenSuggestion"
-                    local suggestion = require("supermaven-nvim.completion_preview")
+                    -- INFO: the local variable suggestion is high prioritized for AI completion
+                    -- currently none AI provider
+                    local suggestion = require("blink.cmp.keymap.presets")["super-tab"]["<Tab>"][1]
                     if suggestion.has_suggestion() then
                         suggestion.on_accept_suggestion()
                     elseif cmp.visible() then
@@ -90,7 +90,6 @@ return {
                 }),
             }),
             sources = {
-                { name = "supermaven", group_index = 1, priority = 100 },
                 { name = "nvim_lsp" },
                 { name = "path" },
                 { name = "buffer" },

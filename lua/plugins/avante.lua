@@ -38,7 +38,7 @@ return {
         timeout = 60000,
     },
     behaviour = {
-        auto_suggestions = false, -- set to false to use supermaven
+        auto_suggestions = false, -- set to false to use AI inline-completion
         auto_set_highlight_group = true,
         auto_set_keymaps = true,
         auto_apply_diff_after_generation = false,
