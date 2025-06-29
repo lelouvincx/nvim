@@ -31,7 +31,7 @@ This is a **LazyVim-based Neovim configuration** with extensive customizations f
 
 ### Plugin Organization
 
-- **AI Integration**: `avante.lua`, `claudecode.lua`, `copilot.lua`, `supermaven-nvim.lua`
+- **AI Integration**: `avante.lua`, `claudecode.lua`, `copilot.lua`, `neocodeium.lua`
 - **Completion**: `blink.lua` (preferred), `nvim-cmp.lua` (fallback)
 - **Development**: `treesitter.lua`, `gitsigns.lua`, `lazydocker.lua`, `project.lua`
 - **UI/UX**: `colorscheme.lua`, `lualine.lua`, `neo-tree.lua`, `noice.lua`
@@ -49,15 +49,15 @@ Key extras loaded via `lua/config/lazy.lua`:
 
 ### AI-First Development
 
-- **Primary Completion**: Supermaven (enabled) with Blink.cmp integration
-- **Chat Interface**: Configurable AI chat (`claudecode` or `avante`)
+- **Primary Completion**: Neocodeium (enabled) with Blink.cmp integration
+- **Chat Interface**: Claude Code integration (`vim.g.ai_chat = "claudecode"`)
 - **Fallback**: Copilot available but disabled by default
-- **Feature Flags**: `vim.g.ai_chat`, `vim.g.supermaven_suggestion`, `vim.g.copilot_suggestion`
+- **Feature Flags**: `vim.g.ai_chat`, `vim.g.neocodeium_suggestion`, `vim.g.copilot_suggestion`
 
 ### Completion Strategy
 
 - **Primary**: Blink.cmp (Rust-based, performant) with `vim.g.blink_enabled = true`
-- **Sources**: LSP, AI (Supermaven), buffer, path, ripgrep
+- **Sources**: LSP, AI (Neocodeium), buffer, path, ripgrep
 - **Fallback**: nvim-cmp disabled by default (`vim.g.cmp_enabled = false`)
 
 ### LSP Configuration
