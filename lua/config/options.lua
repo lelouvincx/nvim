@@ -25,7 +25,7 @@ vim.g.blink_enabled = true
 -- Enable AI
 -- shoule be one of copilot
 vim.g.copilot_suggestion = false
-vim.g.ai_cmp = true
+vim.g.ai_cmp = "neocodeium"
 vim.g.ai_chat = "claudecode" -- avante or claudecode
 
 -- Enable LSP Signature
