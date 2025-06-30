@@ -63,17 +63,30 @@ return {
         local neocodeium = require("neocodeium")
         neocodeium.setup(opts)
 
-        -- Keymaps configuration
+        -- Keymaps configuration using which-key
         -- In macos, <A> - alt key is similar to the option key
-        vim.keymap.set("i", "<A-l>", neocodeium.accept)
-        vim.keymap.set("i", "<A-;>", neocodeium.accept_line)
-        vim.keymap.set("i", "<A-'>", neocodeium.accept_word)
-        vim.keymap.set("i", "<A-n>", function()
-            neocodeium.cycle_or_complete()
-        end)
-        vim.keymap.set("i", "<A-p>", function()
-            neocodeium.cycle_or_complete(-1)
-        end)
-        vim.keymap.set("i", "<A-.>", neocodeium.clear)
+        local wk = require("which-key")
+        wk.add({
+            { "<A-l>", neocodeium.accept, desc = "Accept suggestion", mode = "i" },
+            { "<A-;>", neocodeium.accept_line, desc = "Accept line", mode = "i" },
+            { "<A-'>", neocodeium.accept_word, desc = "Accept word", mode = "i" },
+            {
+                "<A-n>",
+                function()
+                    neocodeium.cycle_or_complete()
+                end,
+                desc = "Next suggestion",
+                mode = "i",
+            },
+            {
+                "<A-p>",
+                function()
+                    neocodeium.cycle_or_complete(-1)
+                end,
+                desc = "Previous suggestion",
+                mode = "i",
+            },
+            { "<A-.>", neocodeium.clear, desc = "Clear suggestion", mode = "i" },
+        })
     end,
 }
