@@ -27,7 +27,14 @@ return {
         port_range = { min = 10000, max = 65535 }, -- random port for websocket server to connect to claude cli
         auto_start = true,
         log_level = "info", -- "trace", "debug", "info", "warn", "error"
-        terminal_cmd = nil, -- Custom terminal command (default: "claude")
+        -- INFO: custom claude command, add --mcp-config to use configured MCP servers
+        terminal_cmd = function()
+            local cmd = "claude"
+            if vim.g.mcp_config_path then
+                cmd = string.format("%s --mcp-config='%s'", "claude", vim.g.mcp_config_path)
+            end
+            return cmd
+        end,
 
         -- Selection Tracking
         track_selection = true,

@@ -27,6 +27,7 @@ vim.g.blink_enabled = true
 vim.g.copilot_suggestion = false
 vim.g.ai_cmp = "neocodeium"
 vim.g.ai_chat = "claudecode" -- avante or claudecode
+vim.g.mcp_config_path = "${HOME}/Library/Application Support/Claude/claude_desktop_config.json"
 
 -- Enable LSP Signature
 vim.g.lsp_signature = true
