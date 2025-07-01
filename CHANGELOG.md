@@ -1,5 +1,24 @@
 # Changelog
 
+## [1.5.0](https://github.com/lelouvincx/nvim/compare/v1.4.0...v1.5.0) (2025-07-01)
+
+
+### Features
+
+* **claudecode:** Add claude code integration ([#11](https://github.com/lelouvincx/nvim/issues/11)) ([91f0f58](https://github.com/lelouvincx/nvim/commit/91f0f588944f8bbdd0a92c621f4da721add9ed28))
+* **claudecode:** add Claude Code integration plugin ([30ec67e](https://github.com/lelouvincx/nvim/commit/30ec67e670afb6784ea290a85d96e46a03550d1a))
+* **neocodeium:** add new plugin for AI inline-completion ([16742cd](https://github.com/lelouvincx/nvim/commit/16742cd22f620ab8d8a8f822c74579b785a9f87d))
+
+
+### Bug Fixes
+
+* **avante:** default provider to openai ([3201a09](https://github.com/lelouvincx/nvim/commit/3201a095feb56b0818c366c8a5e4145ab83c47d3))
+* **avante:** update config to match with new releass ([eb0fa35](https://github.com/lelouvincx/nvim/commit/eb0fa35e4e33f5ea28ef48f6879477cc9c641180))
+* **blink:** correct build version ([58501e4](https://github.com/lelouvincx/nvim/commit/58501e4eef54820c67b5fbe2add6d013a37c50f3))
+* **options:** config ai selection between avante and claudecode (prefer claudecode) ([50a3c0b](https://github.com/lelouvincx/nvim/commit/50a3c0b5c277b13a1b0d00648c4e5e5948ebca3a))
+* **options:** rename copilot_chat to ai_chat ([d327b6f](https://github.com/lelouvincx/nvim/commit/d327b6f30d2a7f3222feba663b5281859904f850))
+* **supermaven:** remove supermaven from plugins ([b9e31c1](https://github.com/lelouvincx/nvim/commit/b9e31c18f69ea103a8e2751a2142b102761a6f5a))
+
 ## [1.4.0](https://github.com/lelouvincx/nvim/compare/v1.3.3...v1.4.0) (2025-06-01)
 
 
