@@ -4,10 +4,15 @@ return {
         lazy = true,
         name = "catppuccin",
         opts = {
-            flavour = "mocha",
+            flavour = "latte",
             background = { -- :h background
                 light = "latte",
                 dark = "mocha",
+            },
+            dim_inactive = {
+                enabled = true,
+                shade = "dark",
+                percentage = 0.15,
             },
             transparent_background = true,
             default_integrations = true,
