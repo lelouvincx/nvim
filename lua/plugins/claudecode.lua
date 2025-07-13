@@ -28,29 +28,23 @@ return {
         auto_start = true,
         log_level = "info", -- "trace", "debug", "info", "warn", "error"
         -- INFO: custom claude command, add --mcp-config to use configured MCP servers
-        terminal_cmd = function()
-            local cmd = "claude"
-            if vim.g.mcp_config_path then
-                cmd = string.format("%s --mcp-config='%s'", "claude", vim.g.mcp_config_path)
-            end
-            return cmd
-        end,
+        terminal_cmd = "claude --mcp-config /Users/${USER}/Library/Application\\ Support/Claude/claude_desktop_config.json",
+        -- terminal_cmd = function()
+        --     local cmd = "claude"
+        --     if vim.g.mcp_config_path then
+        --         cmd = string.format("%s --mcp-config='%s'", "claude", vim.g.mcp_config_path)
+        --     end
+        --     return cmd
+        -- end,
 
         -- Selection Tracking
         track_selection = true,
         visual_demotion_delay_ms = 50,
 
-        -- Terminal Configuration
-        terminal = {
-            split_side = "right", -- "left" or "right"
-            split_width_percentage = 0.30,
-            provider = "auto", -- "auto", "snacks", or "native"
-            auto_close = true,
-        },
-
         -- Diff Integration
         diff_opts = {
             auto_close_on_accept = true,
+            show_diff_stats = true,
             vertical_split = true,
             open_in_current_tab = true,
         },
