@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.5.1](https://github.com/lelouvincx/nvim/compare/v1.5.0...v1.5.1) (2025-08-01)
+
+
+### Bug Fixes
+
+* **claudecode:** remove option mcp_config_path, use direct link instead ([171d305](https://github.com/lelouvincx/nvim/commit/171d3051a1302a32bd420b06a943bed8885573ee))
+* **colorschema:** use catppuccin latte ([e6c553f](https://github.com/lelouvincx/nvim/commit/e6c553fb12eaed4ba2466b015e2f094c29588e4f))
+
 ## [1.5.0](https://github.com/lelouvincx/nvim/compare/v1.4.0...v1.5.0) (2025-07-01)
 
 
