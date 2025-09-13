@@ -105,7 +105,7 @@ return {
             -- adding any nvim-cmp sources here will enable them
             -- with blink.compat
             per_filetype = { sql = { "dadbod" } },
-            default = { "omni", "buffer", "snippets", "lsp", "path", "ripgrep", "dadbod", "env" },
+            default = { "omni", "buffer", "snippets", "lsp", "path", "ripgrep" },
             providers = {
                 --[[
                 INFO: score_offset order list:
