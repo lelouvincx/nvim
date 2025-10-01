@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.5.2](https://github.com/lelouvincx/nvim/compare/v1.5.1...v1.5.2) (2025-10-01)
+
+
+### Bug Fixes
+
+* **blink:** remove integration for dadbod (unused) and env (high risk) ([1c1fe64](https://github.com/lelouvincx/nvim/commit/1c1fe64e1a12543fe8d2acfdde169ba70492e9a8))
+
 ## [1.5.1](https://github.com/lelouvincx/nvim/compare/v1.5.0...v1.5.1) (2025-08-01)
 
 
