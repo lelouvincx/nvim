@@ -13,6 +13,11 @@
   - [7. Thanks to...](#7-thanks-to)
   - [8. About me](#8-about-me)
 
+## 0. Progress
+
+- [ ] Fix version incompatible 0.11.2
+- [ ] Migrate from neocodeium to github copilot
+
 ## 1. Screenshots
 
 **Standard code editing** (with Neotree, Trouble, and mini view of functions):
@@ -278,4 +283,4 @@ In general, I want to give thanks to everyone who shares their dotfiles for thei
 ## 8. About me
 
 - Visit my blog: [lelouvincx](https://lelouvincx.com)
-- Email me: [dinhminhchinh3357@gmail.com](mailto:dinhminhchinh3357@gmail.com)
+- Email me: [dinhminhchinh3357@gmail.com](mailto:contact@lelouvincx.com)

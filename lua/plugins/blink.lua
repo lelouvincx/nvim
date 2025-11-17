@@ -108,7 +108,7 @@ return {
             default = { "omni", "buffer", "snippets", "lsp", "path", "ripgrep" },
             providers = {
                 --[[
-                INFO: score_offset order list:
+                INFO: score_offset order list (still keep for referencing purpose):
                 - omni: 6
                 - path: 3
                 - lsp: 0
