@@ -21,19 +21,19 @@
 ## 1. Screenshots
 
 **Standard code editing** (with Neotree, Trouble, and mini view of functions):
-![](https://public.lelouvincx.com/nvim.featured_1.png)
+![](https://media.nvim.lelouvincx.com/nvim.featured_1.png)
 
 **Telescope search**:
-![](https://public.lelouvincx.com/nvim.featured_2.png)
+![](https://media.nvim.lelouvincx.com/nvim.featured_2.png)
 
 **Copilot Chat**:
-![](https://public.lelouvincx.com/nvim.featured_3.png)
+![](https://media.nvim.lelouvincx.com/nvim.featured_3.png)
 
 **Debugging with Dap**:
-![](https://public.lelouvincx.com/nvim.featured_4.png)
+![](https://media.nvim.lelouvincx.com/nvim.featured_4.png)
 
 **Multiple Languages supported**:
-![](https://public.lelouvincx.com/nvim.featured_5.png)
+![](https://media.nvim.lelouvincx.com/nvim.featured_5.png)
 
 ## 2. Features
 
@@ -42,13 +42,13 @@ Adopting the [LazyVim](https://www.lazyvim.org/) philosophy, this configuration 
 <details>
   <summary><b>Status Line</b></summary>
   <div>Parts include git status, diagnostics, current buffer path, class, function working on, copilot status, cursor position.</div>
-  <img src="https://public.lelouvincx.com/nvim.statusline.png"/>
+  <img src="https://media.nvim.lelouvincx.com/nvim.statusline.png"/>
 </details>
 
 <details>
   <summary><b>Buffer Line</b></summary>
   <div>Shows buffer list, diagnostics.</div>
-  <img src="https://public.lelouvincx.com/nvim.bufferline.png"/>
+  <img src="https://media.nvim.lelouvincx.com/nvim.bufferline.png"/>
 </details>
 
 <details>
@@ -68,17 +68,17 @@ Adopting the [LazyVim](https://www.lazyvim.org/) philosophy, this configuration 
 <details>
   <summary><b>LSP Features</b></summary>
   <div>Code diagnostics (info, warning, error).</div>
-  <img src="https://public.lelouvincx.com/nvim.diagnostics.png"/>
+  <img src="https://media.nvim.lelouvincx.com/nvim.diagnostics.png"/>
   <div>Toggle Trouble to quick diagnostics navigation.</div>
   <video src="https://github.com/user-attachments/assets/7ce24eee-f8c0-400f-b1ae-9f016c61ba1c"></video>
   <div>Go to references.</div>
   <video src="https://github.com/user-attachments/assets/0e6a3f07-8204-45b3-a645-b0488bb72560"></video>
   <div>Code Action.</div>
-  <img src="https://public.lelouvincx.com/nvim.codeaction.png"></img>
+  <img src="https://media.nvim.lelouvincx.com/nvim.codeaction.png"></img>
   <div>Document.</div>
-  <img src="https://public.lelouvincx.com/nvim.document.png"></img>
+  <img src="https://media.nvim.lelouvincx.com/nvim.document.png"></img>
   <div>LSP Progress.</div>
-  <img src="https://public.lelouvincx.com/nvim.lspprogress.png"></img>
+  <img src="https://media.nvim.lelouvincx.com/nvim.lspprogress.png"></img>
   <div>Switch Python VENV.</div>
   <video src="https://github.com/user-attachments/assets/fed2b2f3-c81d-4de4-b5d6-04fe563b244f"></video>
 </detai
@@ -96,7 +96,7 @@ Adopting the [LazyVim](https://www.lazyvim.org/) philosophy, this configuration 
   <div>Chat with Copilot.</div>
   <video src="https://github.com/user-attachments/assets/86206487-9133-41a2-82d8-63dfc000ad4c"></video>
   <div>Improve developing experience with highly customized prompts.</div>
-  <img src="https://public.lelouvincx.com/nvim.copilotchatprompts.png"></img>
+  <img src="https://media.nvim.lelouvincx.com/nvim.copilotchatprompts.png"></img>
   <div>Quick Chat.</div>
   <video src="https://github.com/user-attachments/assets/2820ebfd-1862-4086-998c-57c8eb6cfef8"></video>
 </details>
@@ -106,22 +106,22 @@ Adopting the [LazyVim](https://www.lazyvim.org/) philosophy, this configuration 
   <summary><b>Git Diff (gitsigns, git hunk diff, mini.diff, lazygit)</b></summary>
   <video src="https://github.com/user-attachments/assets/3137b246-1aa6-408a-9e78-7d788b5e5f55"></video>
   <summary><b>Integrated with Lazygit</b></summary>
-  <img src="https://public.lelouvincx.com/nvim.lazygit.png"></img>
+  <img src="https://media.nvim.lelouvincx.com/nvim.lazygit.png"></img>
   <summary><b>Git Commit History</b></summary>
-  <img src="https://public.lelouvincx.com/nvim.gitcommithistory.png"></img>
+  <img src="https://media.nvim.lelouvincx.com/nvim.gitcommithistory.png"></img>
   <summary><b>View current file's History</b></summary>
-  <img src="https://public.lelouvincx.com/nvim.gitcurrentfilehistory.png"></img>
+  <img src="https://media.nvim.lelouvincx.com/nvim.gitcurrentfilehistory.png"></img>
 </details>
 
  <details>
   <summary><b>Git Blame when hover line</b></summary>
-  <img src="https://public.lelouvincx.com/nvim.gitblame.png"/>
+  <img src="https://media.nvim.lelouvincx.com/nvim.gitblame.png"/>
 </details>
 
 <details>
   <summary><b>Debugging</b></summary>
   <div>Debugging Options.</div>
-  <img src="https://public.lelouvincx.com/nvim.debugui.png"></img>
+  <img src="https://media.nvim.lelouvincx.com/nvim.debugui.png"></img>
   <div>Debug flow.</div>
   <video src="https://github.com/user-attachments/assets/edf465af-8376-4b32-bda2-fe95a3a4bdf2"></video>
 </details>
@@ -147,22 +147,22 @@ Adopting the [LazyVim](https://www.lazyvim.org/) philosophy, this configuration 
 <details>
   <summary><b>Keymap Suggestion</b></summary>
   <summary><b>Global Keymap</b></summary>
-  <img src="ublic.lelouvincx.com/nvim.keymap_1.png"></img>
+  <img src="https://media.nvim.lelouvincx.com/nvim.keymap_1.png"></img>
   <summary><b>LSP Keymap</b></summary>
-  <img src="https://public.lelouvincx.com/nvim.keymap_2.png"></img>
+  <img src="https://media.nvim.lelouvincx.com/nvim.keymap_2.png"></img>
   <summary><b>Git Keymap</b></summary>
-  <img src="https://public.lelouvincx.com/nvim.keymap_3.png"></img>
+  <img src="https://media.nvim.lelouvincx.com/nvim.keymap_3.png"></img>
   <summary><b>Window Keymap</b></summary>
-  <img src="https://public.lelouvincx.com/nvim.keymap_4.png"></img>
+  <img src="https://media.nvim.lelouvincx.com/nvim.keymap_4.png"></img>
 </details>
 
 <details>
   <summary><b>Comments</b></summary>
-  <img src="https://public.lelouvincx.com/nvim.comments.png"></img>
+  <img src="https://media.nvim.lelouvincx.com/nvim.comments.png"></img>
   <summary><b>Toggle Trouble to quick diagnostics navigation.</b></summary>
   <video src="https://github.com/user-attachments/assets/0661671a-886e-49e6-a9f7-f0176a4bd2c5"></video>
   <summary><b>Telescope comments</b></summary>
-  <img src="https://public.lelouvincx.com/nvim.telescopecomments.png"></img>
+  <img src="https://media.nvim.lelouvincx.com/nvim.telescopecomments.png"></img>
 </details>
 
 <details>
@@ -172,7 +172,7 @@ Adopting the [LazyVim](https://www.lazyvim.org/) philosophy, this configuration 
 
 <details>
   <summary><b>Rainbow brackets</b></summary>
-  <img src="https://public.lelouvincx.com/nvim.rainbowbrackets.png"/>
+  <img src="https://media.nvim.lelouvincx.com/nvim.rainbowbrackets.png"/>
 </details>
 
 ... and many more features, visit [lazyvim](https://www.lazyvim.org/)!
@@ -181,7 +181,7 @@ Adopting the [LazyVim](https://www.lazyvim.org/) philosophy, this configuration 
 
 Currently I'm using Neovim as my main IDE for developing data engineering platforms and LLM applications (as hobby):
 
-![](https://public.lelouvincx.com/nvim.mylaptop.jpg)
+![](https://media.nvim.lelouvincx.com/nvim.mylaptop.jpg)
 
 - **Laptop**: Macbook Pro 2024 M4 14-inch/Thinkbook 14
 - **Keyboard**: NuPhy Air75
