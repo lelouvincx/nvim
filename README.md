@@ -15,8 +15,8 @@
 
 ## 0. Progress
 
-- [ ] Fix version incompatible 0.11.2
-- [ ] Migrate from neocodeium to github copilot
+- [x] Fix version incompatible 0.11.2
+- [x] Migrate from neocodeium to github copilot
 
 ## 1. Screenshots
 
