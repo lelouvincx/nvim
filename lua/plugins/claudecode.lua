@@ -28,14 +28,7 @@ return {
         auto_start = true,
         log_level = "info", -- "trace", "debug", "info", "warn", "error"
         -- INFO: custom claude command, add --mcp-config to use configured MCP servers
-        terminal_cmd = "claude --mcp-config /Users/${USER}/Library/Application\\ Support/Claude/claude_desktop_config.json",
-        -- terminal_cmd = function()
-        --     local cmd = "claude"
-        --     if vim.g.mcp_config_path then
-        --         cmd = string.format("%s --mcp-config='%s'", "claude", vim.g.mcp_config_path)
-        --     end
-        --     return cmd
-        -- end,
+        terminal_cmd = "claude --mcp-config /Users/${USER}/Library/Application\\ Support/Claude/claude_code_config.json",
 
         -- Selection Tracking
         track_selection = true,
