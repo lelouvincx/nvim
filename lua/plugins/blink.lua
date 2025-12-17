@@ -21,6 +21,13 @@ return {
         "bydlw98/blink-cmp-env", -- for env completion
         "mikavilpas/blink-ripgrep.nvim", --for ripgrep completion
         { "L3MON4D3/LuaSnip", version = "v2.*" }, -- for luasnip completion
+        {
+            "fang2hou/blink-copilot", -- for copilot completion
+            opts = {
+                max_completions = 5,
+                max_attempts = 3,
+            },
+        },
     },
 
     ---@module 'blink.cmp'
@@ -91,7 +98,7 @@ return {
                 },
             },
             ghost_text = {
-                enabled = (vim.g.ai_cmp == "copilot"), -- only show for ai completion
+                enabled = true, -- only show for ai completion
             },
         },
 
@@ -105,10 +112,11 @@ return {
             -- adding any nvim-cmp sources here will enable them
             -- with blink.compat
             per_filetype = { sql = { "dadbod" } },
-            default = { "omni", "buffer", "snippets", "lsp", "path", "ripgrep" },
+            default = { "copilot", "omni", "buffer", "snippets", "lsp", "path", "ripgrep" },
             providers = {
                 --[[
                 INFO: score_offset order list (still keep for referencing purpose):
+                - copilot: 10
                 - omni: 6
                 - path: 3
                 - lsp: 0
@@ -119,6 +127,12 @@ return {
                 - dadbod: -5
                 - env: -6
                 ]]
+                copilot = {
+                    name = "Copilot",
+                    module = "blink-copilot",
+                    score_offset = 10,
+                    async = true,
+                },
                 omni = {
                     score_offset = 6,
                 },
@@ -173,7 +187,7 @@ return {
         },
 
         keymap = {
-            preset = "enter",
+            preset = "super-tab",
             ["<C-h>"] = { "show" },
             ["<C-y>"] = { "select_and_accept" },
             ["<C-k>"] = { "select_prev", "fallback" },
@@ -181,20 +195,6 @@ return {
             ["<C-s>"] = { "show_signature" },
             ["<C-S-j>"] = { "scroll_documentation_down" },
             ["<C-S-k>"] = { "scroll_documentation_up" },
-            -- INFO: Super Tab
-            -- Description: Use <Tab> to select the next item in the completion menu, and <S-Tab> to select the previous item.
-            ["<Tab>"] = {
-                function(cmp)
-                    if cmp.snippet_active() then
-                        return cmp.accept()
-                    else
-                        return cmp.select_and_accept()
-                    end
-                end,
-                "snippet_forward",
-                "fallback",
-            },
-            ["<S-Tab>"] = { "snippet_backward", "fallback" },
         },
     },
 
@@ -217,7 +217,13 @@ return {
         if not opts.keymap["<Tab>"] then
             if opts.keymap.preset == "super-tab" then -- super-tab
                 opts.keymap["<Tab>"] = {
-                    require("blink.cmp.keymap.presets")["super-tab"]["<Tab>"][1],
+                    function(cmp)
+                        if cmp.snippet_active() then
+                            return cmp.accept()
+                        else
+                            return cmp.select_and_accept()
+                        end
+                    end,
                     LazyVim.cmp.map({ "snippet_forward", "ai_accept" }),
                     "fallback",
                 }
