@@ -1,5 +1,25 @@
 # Changelog
 
+## [1.6.0](https://github.com/lelouvincx/nvim/compare/v1.5.2...v1.6.0) (2025-12-17)
+
+
+### Features
+
+* **bufferline:** add plugin ([9abcb80](https://github.com/lelouvincx/nvim/commit/9abcb80edbe0737282ae455fd2b57afc19a85b86))
+* **copilot:** setup github copilot again as inline code completion and super tab for blink ([dac672e](https://github.com/lelouvincx/nvim/commit/dac672e16bb4e869aaea0fff359b791c80e4cc11))
+
+
+### Bug Fixes
+
+* **avante:** library name change: echasnovski/mini.pick to nvim-mini/mini.pick ([6c2eb9e](https://github.com/lelouvincx/nvim/commit/6c2eb9e3ca0182d0b11b8083512303d1b9ba9e41))
+* **blink:** refactor code to be cleaner ([5f51de9](https://github.com/lelouvincx/nvim/commit/5f51de90ac5a41f790db402536f9d44a9cf2a22a))
+* **claudecode:** remove redundant parts ([f883e1f](https://github.com/lelouvincx/nvim/commit/f883e1f561f7965d54f5972e64e87d4c99ae55b9))
+* **colorscheme:** fix error bufferline ([bbee6f4](https://github.com/lelouvincx/nvim/commit/bbee6f4aa09aebc815b9c36ace9580af73c5439d))
+* **colorscheme:** lock commit catppuccin ([210137f](https://github.com/lelouvincx/nvim/commit/210137fd062b276ec49fac99ef52ed4d5877a005))
+* **copilot:** change ghost text of copilot to be more clean ([4d72894](https://github.com/lelouvincx/nvim/commit/4d72894d52bce8705d256afd2c0c7d449257d1ea))
+* **neocodeium:** remove plugin (not use anymore), fallback to copilot ([f55ce02](https://github.com/lelouvincx/nvim/commit/f55ce0298fe56f33f70ce9606e38333b722bcd6d))
+* **rainbow:** upgrade to new github repository ([59e01d5](https://github.com/lelouvincx/nvim/commit/59e01d52cf5910bbb930558c5c6b52fc36fefac9))
+
 ## [1.5.2](https://github.com/lelouvincx/nvim/compare/v1.5.1...v1.5.2) (2025-10-01)
 
 
