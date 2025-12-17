@@ -5,7 +5,7 @@ return {
         name = "catppuccin",
         opts = {
             flavour = "latte",
-            background = { -- :h background
+            background = {
                 light = "latte",
                 dark = "mocha",
             },
@@ -17,6 +17,7 @@ return {
             transparent_background = false,
             default_integrations = true,
             integrations = {
+                bufferline = true,
                 aerial = true,
                 cmp = vim.g.cmp_enabled,
                 blink_cmp = vim.g.blink_enabled,
@@ -32,19 +33,7 @@ return {
                 snacks = false,
             },
         },
-        specs = {
-            {
-                "akinsho/bufferline.nvim",
-                optional = true,
-                opts = function(_, opts)
-                    if (vim.g.colors_name or ""):find("catppuccin") then
-                        opts.highlights = require("catppuccin.groups.integrations.bufferline").get()
-                    end
-                end,
-            },
-        },
     },
-    -- Configure LazyVim to load gruvbox
     {
         "LazyVim/LazyVim",
         opts = {
