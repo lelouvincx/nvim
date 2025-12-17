@@ -91,7 +91,7 @@ return {
                 },
             },
             ghost_text = {
-                enabled = (vim.g.ai_cmp == "neocodeium"), -- only show for ai completion
+                enabled = (vim.g.ai_cmp == "copilot"), -- only show for ai completion
             },
         },
 
