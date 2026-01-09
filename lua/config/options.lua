@@ -2,6 +2,11 @@
 -- Default options that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/options.lua
 -- Add any additional options here
 
+-- Set line number and relative number
+vim.opt.number = true
+vim.opt.relativenumber = true
+
+-- Disable unused language providers to speed up startup time
 vim.g.loaded_python3_provider = 1
 vim.g.loaded_python_provider = 1
 vim.g.loaded_node_provider = 1
