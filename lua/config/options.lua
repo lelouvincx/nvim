@@ -17,9 +17,7 @@ vim.g.lazyvim_python_ruff = "ruff"
 -- Send ESC to the terminal to keep it from exiting
 vim.g.alt_send_esc = true
 
--- Enable nvim-cmp or blink
--- should be one of nvim-cmp or blink, not both
-vim.g.cmp_enabled = false
+-- Use blink as auto completion engine
 vim.g.blink_enabled = true
 
 -- Enable AI

@@ -9,6 +9,7 @@ return {
         "sources.default",
     },
     dependencies = {
+        { "saghen/blink.compat", opts = {} },
         "rafamadriz/friendly-snippets",
         "bydlw98/blink-cmp-env",
         "mikavilpas/blink-ripgrep.nvim",

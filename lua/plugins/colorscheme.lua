@@ -20,7 +20,6 @@ return {
             integrations = {
                 bufferline = true,
                 aerial = true,
-                cmp = vim.g.cmp_enabled,
                 blink_cmp = vim.g.blink_enabled,
                 grug_far = true,
                 headlines = true,
