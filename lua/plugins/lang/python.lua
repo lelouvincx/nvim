@@ -13,7 +13,7 @@ return {
                         autoSearchPaths = true,
                         autoImportCompletions = true,
                         useLibraryCodeForTypes = true,
-                        -- INFO: Disable this option, use ruff's organizeImports instead
+                        -- INFO: Set true to disable this option, use ruff's organizeImports instead
                         disableOrganizeImports = true,
                     },
                     python = {
@@ -39,20 +39,6 @@ return {
                 },
             },
         },
-        setup = {
-            -- NOTE: This is the old LSP implementation version
-            -- ["ruff"] = function()
-            --     local on_attach = function(client, bufnr)
-            --         if client.name == "ruff" then
-            --             -- INFO: Disable hover in favor of Pyright
-            --             client.server_capabilities.hoverProvider = false
-            --         end
-            --     end
-            --
-            --     require("lspconfig").ruff.setup({
-            --         on_attach = on_attach,
-            --     })
-            -- end,
-        },
+        setup = {},
     },
 }
