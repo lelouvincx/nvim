@@ -1,5 +1,24 @@
 # Changelog
 
+## [1.7.0](https://github.com/lelouvincx/nvim/compare/v1.6.0...v1.7.0) (2026-02-02)
+
+
+### Features
+
+* **amp:** add ampcode - new coding agent ([1eab6dc](https://github.com/lelouvincx/nvim/commit/1eab6dc104c73684ed00f6d25f5451ce7e181733))
+* **telescope:** update plugin ([867064c](https://github.com/lelouvincx/nvim/commit/867064ccb323954060024a843cb0539069c498e9))
+* **telescope:** update plugin ([#18](https://github.com/lelouvincx/nvim/issues/18)) ([e9d5cc9](https://github.com/lelouvincx/nvim/commit/e9d5cc9be08c40cac5caeb099b97fbcdea1eca3d))
+
+
+### Bug Fixes
+
+* **example:** delete boilerplate example.lua ([ea07047](https://github.com/lelouvincx/nvim/commit/ea07047d2ef9acef902c6e83c7cf1bac27b0d996))
+* **ftdetect:** migrate into 1 single file in plugins ([588ea5b](https://github.com/lelouvincx/nvim/commit/588ea5b96814ff1826074a876d9c3a3fb1ff4300))
+* **lang/python:** remove redundant comments ([9ec0e84](https://github.com/lelouvincx/nvim/commit/9ec0e849208694cccdf8da6527cddc9b272c31e7))
+* **neovim:** add line number and relative number ([e14240d](https://github.com/lelouvincx/nvim/commit/e14240d8cbccb15c92e399777d4d64fb3d1c53f0))
+* **nvim-cmp:** remove plugin, use blink as main completion engine ([3e9210c](https://github.com/lelouvincx/nvim/commit/3e9210cb471f28be4121d000772e0802a2858d5a))
+* **options:** unload languages: python, python3, node ([017fd07](https://github.com/lelouvincx/nvim/commit/017fd07883a42d5aebbc21d48194e8f4817e1495))
+
 ## [1.6.0](https://github.com/lelouvincx/nvim/compare/v1.5.2...v1.6.0) (2025-12-17)
 
 
