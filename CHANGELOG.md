@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.7.2](https://github.com/lelouvincx/nvim/compare/v1.7.1...v1.7.2) (2026-03-01)
+
+
+### Bug Fixes
+
+* **colorscheme:** use catppuccin mocha ([1d90d14](https://github.com/lelouvincx/nvim/commit/1d90d1498ae70af1d5ab3833ad692e8d933da6d1))
+* **ftdetect:** detect holistics AMQL file type ([2320040](https://github.com/lelouvincx/nvim/commit/2320040e4d825c28645d804ec2e3bb163ff0e932))
+
 ## [1.7.1](https://github.com/lelouvincx/nvim/compare/v1.7.0...v1.7.1) (2026-03-01)
 
 
