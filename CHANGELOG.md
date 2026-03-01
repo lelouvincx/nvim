@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.7.1](https://github.com/lelouvincx/nvim/compare/v1.7.0...v1.7.1) (2026-03-01)
+
+
+### Bug Fixes
+
+* **claudecode:** remove default configs ([7f7c563](https://github.com/lelouvincx/nvim/commit/7f7c563ceeeb621fe35cebbee82a024aa6778f82))
+
 ## [1.7.0](https://github.com/lelouvincx/nvim/compare/v1.6.0...v1.7.0) (2026-02-02)
 
 
