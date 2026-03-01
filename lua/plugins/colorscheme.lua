@@ -5,7 +5,7 @@ return {
         name = "catppuccin",
         commit = "ce8d176faa4643e026e597ae3c31db59b63cef09",
         opts = {
-            flavour = "latte",
+            flavour = "mocha",
             background = {
                 light = "latte",
                 dark = "mocha",
