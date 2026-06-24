@@ -190,7 +190,7 @@ Currently I'm using Neovim as my main IDE for developing data engineering platfo
 - **Neovim**: v0.10.4
 - **Tmux**: 3.4
 - **Font**: JetBrainsMono Nerd Font Mono
-- **Theme**: Catppuccin
+- **Theme**: Dracula
 - **Shell**: ZSH, package managed by [zimfw](https://github.com/zimfw/zimfw), with theme [spaceship prompt](https://github.com/spaceship-prompt/spaceship-prompt)
 - **Languages**: Python, Javascript, Typescript, Java, SQL, Bash, Ruby; managed by [asdf](https://asdf-vm.com/)
 
