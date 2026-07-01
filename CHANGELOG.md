@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.8.0](https://github.com/lelouvincx/nvim/compare/v1.7.2...v1.8.0) (2026-07-01)
+
+
+### Features
+
+* use dracula colorscheme ([deba87c](https://github.com/lelouvincx/nvim/commit/deba87cf8dfa5100c6f2a43f4640784287a6a17b))
+* use dracula colorscheme ([#23](https://github.com/lelouvincx/nvim/issues/23)) ([6275268](https://github.com/lelouvincx/nvim/commit/6275268956b77e96355a842d1aab8652556e3e9c))
+
 ## [1.7.2](https://github.com/lelouvincx/nvim/compare/v1.7.1...v1.7.2) (2026-03-01)
 
 
