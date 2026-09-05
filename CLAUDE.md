@@ -20,7 +20,6 @@ This is a **LazyVim-based Neovim configuration** with extensive customizations f
 - **Foundation**: LazyVim framework with lazy.nvim plugin manager
 - **Initialization**: `init.lua` → `lua/config/lazy.lua` → plugin loading
 - **Feature Flags**: Global variables control plugin loading (`vim.g.ai_chat`, `vim.g.blink_enabled`)
-- **Colorscheme**: Dracula
 
 ### Configuration Structure
 
